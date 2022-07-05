@@ -1,0 +1,44 @@
+
+
+UserType [Entity]
+  type (admin or user)
+
+Student
+  ID Number (PK)
+  First Name
+  Last Name
+  Middle Name
+  Age
+  Gender
+  QR Code
+  Grade
+  Section
+
+Account
+  ID (PK)
+  UserType (FK)
+  Username
+  Password
+  Student_ID (FK)
+  Date
+
+
+Event
+  ID (PK)
+  Date
+  Name_Of_Event
+  Venue
+  
+
+EVENT_STUD_ATTENDANCE
+  ID
+  Event_ID(FK)
+  Stud_ID(FK)
+  Date
+  
+
+
+
+
+
+
