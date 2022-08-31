@@ -47,7 +47,7 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <h2 class="mb-3 fw-bold">Add User</h2>
+      <h2 class="mb-3 fw-bold">Add Admin or Teacher</h2>
       <p class="text-danger">Kindly fill up the event information here</p>
       <?php if (session()->has('registered')) : ?>
         <div class="alert alert-success w-25">
@@ -69,6 +69,11 @@
             </div>
 
             <div class="mb-2 w-100">
+              <label for="exampleInputEmail1" class="form-label fs-6">Age</label>
+              <input type="text" name="age" class="form-control w-50" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="mb-2 w-100">
               <label for="exampleInputEmail1" class="form-label fs-6">USERNAME</label>
               <input type="text" name="username" class="form-control w-50" placeholder="Enter your username" required>
             </div>
@@ -81,7 +86,7 @@
             <div class="mb-2 w-100">
               <label for="exampleInputEmail1" class="form-label fs-6">USERTYPE</label>
               <select class="form-select w-50" name="usertype" id="" onchange="" required>
-                <option value="2" id="2">User</option>
+                <option value="2" id="2">Teacher</option>
                 <option value="1" id="1">Admin</option>
               </select>
             </div>

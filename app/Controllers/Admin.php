@@ -36,6 +36,7 @@ class Admin extends BaseController
       $password = $this->request->getVar('password');
       $fName = $this->request->getVar('firstname');
       $lName = $this->request->getVar('lastname');
+      $age = $this->request->getVar('age');
       $userType = $this->request->getVar('usertype');
       $created_at = date("Y-m-d H:i:s");
       $hashPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -45,6 +46,7 @@ class Admin extends BaseController
         'PASSWORD' => $hashPassword,
         'FNAME' => $fName,
         'LNAME' => $lName,
+        'AGE' => $age,
         'USERTYPE' => $userType,
         'DATE' => $created_at
       ];

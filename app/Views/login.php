@@ -20,15 +20,6 @@
       <div class="container">
         <form class="" action="login" method="POST">
           <div class="mb-3 row">
-            <label for="" class="col-sm-2 col-form-label text-white ">Usertype</label>
-            <div class="col-sm-10">
-              <select class="form-control border border-grey border-2 w-50" name="usertype" required>
-                <option value="2"> Normal User</option>
-                <option value="1"> Admin</option>
-              </select>
-            </div>
-          </div>
-          <div class="mb-3 row">
             <label for="" class="col-sm-2 col-form-label text-white ">Username</label>
             <div class="col-sm-10">
               <input type="text" class="form-control border border-grey border-2" name="username" required id="inputUsername" value="">

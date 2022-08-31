@@ -31,9 +31,9 @@ class Login extends BaseController
         if ($checkPassword) {
           $this->setUserSession($getDetails);
           if (session()->has('id')) {
-            if ($getDetails['USERTYPE'] == 2 && $getDetails['USERTYPE'] == $usertype) {
+            if ($getDetails['USERTYPE'] == 2) {
               return redirect()->to('/user_homepage');
-            } elseif ($getDetails['USERTYPE'] == 1 && $getDetails['USERTYPE'] == $usertype) {
+            } elseif ($getDetails['USERTYPE'] == 1) {
               return redirect()->to('/admin_homepage');
             } else {
               session()->setFlashdata('invalidAccDetails', "Invalid Account Details");
