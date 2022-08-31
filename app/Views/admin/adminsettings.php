@@ -69,6 +69,7 @@
             <tr>
               <th scope="col" class="fs-6">First Name</th>
               <th scope="col" class="fs-6">Last Name</th>
+              <th scope="col" class="fs-6">Age</th>
               <th scope="col" class="fs-6">Username</th>
               <th scope="col" class="fs-6">Password</th>
               <th scope="col" class="fs-6">Action</th>
@@ -80,6 +81,7 @@
               $fName = $account->FNAME;
               $lName = $account->LNAME;
               $userName = $account->USERNAME;
+              $age = $account->AGE;
 
             ?>
               <tr>
@@ -127,9 +129,6 @@
                                   <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 fw-bold">USERNAME</label>
                                   <input type="text" name="username" value="<?php echo $userName; ?>" class="form-control w-100">
                                 </div>
-
-
-
                               </div>
                             </div>
                             <div style="clear:both;"></div>
@@ -140,10 +139,9 @@
                           </div>
                         </form>
                       </div>
-
+                      </div>
                     </div>
                   </div>
-      </div>
       </td>
     <?php } ?>
     </tr>

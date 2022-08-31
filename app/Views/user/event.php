@@ -40,6 +40,9 @@
             <a href="event">Event/ Upcoming Event</a>
           </li>
           <li>
+            <a href="teachersettings">Settings</a>
+          </li>
+          <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
           </li>
         </ul>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>HOMEPAGE | ADD STUDENT</title>
+  <title>HOMEPAGE | STUDENT ATTENDANCE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -38,6 +38,9 @@
           </li>
           <li>
             <a href="event">Event/ Upcoming Event</a>
+          </li>
+          <li>
+            <a href="teachersettings">Settings</a>
           </li>
           <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
@@ -96,11 +99,7 @@
           </tbody>
         </table>
       </div>
-
-
     </div>
   </div>
-
 </body>
-
 </html>

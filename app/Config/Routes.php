@@ -43,9 +43,12 @@ $routes->post('login', 'Login::verifyData');
 $routes->get('user_homepage', 'Home::homepage');
 $routes->get('studentrecords', 'Home::student_records');
 $routes->get('studentattendance', 'Home::student_attendance');
+$routes->get('teachersettings', 'Home::teacher_setting');
 $routes->get('event', 'Home::event');
 $routes->get('year/(:num)', 'Home::student_year/$1');
 $routes->get('section/(:any)', 'Home::student_section/$1');
+$routes->post('update_teacher', 'Home::update_teacher_info');
+$routes->post('update_teacher_account', 'Home::update_teacher_account');
 $routes->post('register', 'Home::add_student');
 
 

@@ -59,6 +59,7 @@ class Login extends BaseController
       'username' => $user['USERNAME'],
       'fname' => $user['FNAME'],
       'lname' => $user['LNAME'],
+      'age' => $user['AGE'],
       'usertype' => $user['USERTYPE'],
     ];
 
