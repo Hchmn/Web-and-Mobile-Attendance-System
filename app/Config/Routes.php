@@ -53,7 +53,10 @@ $routes->post('register', 'Home::add_student');
 
 
 
-
+//PDF ROUTES
+$routes->get('php', 'PdfController::index');
+$routes->get("convertToPDF/(:any)", 'PdfController::htmlToPDF/$1');
+$routes->get("convertStudentDataToPDF/(:any)", 'PdfController::studenHTMLTOPDF/$1');
 
 
 

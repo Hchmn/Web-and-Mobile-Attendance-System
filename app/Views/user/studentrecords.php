@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>HOMEPAGE | ADD STUDENT</title>
+  <title>HOMEPAGE | STUDENT RECORDS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,21 +56,24 @@
       <div class="searchbar mb-3 mt-4  justify-content-between align-items-center">
         <input class="form-control rounded-pill border border-dark" type="text" id="searchData" placeholder="Search.." style="width:250px;">
       </div>
+
       <div class="table-responsive  ">
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col" class="fs-6">ID Num</th>
+              <th scope="col" class="fs-6">LRN</th>
               <th scope="col" class="fs-6">First Name</th>
               <th scope="col" class="fs-6">Last Name</th>
               <th scope="col" class="fs-6">Grade</th>
               <th scope="col" class="fs-6">Section</th>
               <th scope="col" class="qr-code fs-6">QR Code</th>
+              <th scope="col" class="qr-code fs-6">ACTION</th>
             </tr>
           </thead>
 
           <tbody id="tableBody">
             <?php foreach ($studentData->getResult() as $student) {
+              $LRN = $student->LRN;
               $ID = $student->ID;
               $fName = $student->FIRSTNAME;
               $lName = $student->LASTNAME;
@@ -79,25 +82,25 @@
               $qr = $fName . " " . $lName . " " . $student->MIDDLENAME;
 
               $decryptedQRCode = password_verify($qr, $student->QR);
-              if ($decryptedQRCode) {
-                $qrCode = $qr;
-              } else {
-                $qrCode = null;
-              }
+              $qrCode = ($decryptedQRCode) ? $qr : null;
             ?>
               <tr>
-                <td><?php echo $ID; ?></td>
+                <td><?php echo $LRN; ?></td>
                 <td><?php echo $fName; ?></td>
                 <td><?php echo $lName; ?></td>
-                <td><?php echo $Grade; ?></td>
+                <td><?php echo ((int)$Grade + 6); ?></td>
                 <td><?php echo $Section; ?></td>
                 <td>
                   <div class="qrcode-container" id="qrcode-container">
                     <input type="hidden" id="id" value="<?php echo $qrCode; ?>">
                     <div id="qrcode" class="qrcode  mt-2" style="width: 25px;">
-
                     </div>
                   </div>
+                </td>
+                <td>
+                  <a href="/convertStudentDataToPDF<?php echo "/".$ID?>" class="btn btn-success">
+                    DOWNLOAD
+                  </a>
                 </td>
               </tr>
             <?php } ?>
@@ -119,8 +122,6 @@
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
-
-
 
   $(document).ready(function(e) {
     var slides = document.getElementsByClassName("qrcode-container");

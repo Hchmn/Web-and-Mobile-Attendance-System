@@ -57,7 +57,9 @@ class Home extends BaseController
         $queryBuilder = $this->studentModel->select("*")->where("GRADE", $getYear)->where("SECTION", $getSection)->get();
 
         $data = [
-            'sectionData' => $queryBuilder
+            'sectionData' => $queryBuilder,
+            'year' => $getYear,
+            'section' => $getSection
         ];
         return view('user/sections/viewsection', $data);
     }
@@ -83,6 +85,7 @@ class Home extends BaseController
             $mName = $this->request->getVar('middlename');
             $age = $this->request->getVar('age');
             $gender = $this->request->getVar('gender');
+            $LRN = rand(100000000000,999999999999);
             $grade = $this->request->getVar('grade');
             $section = $this->request->getVar('section');
 
@@ -97,7 +100,11 @@ class Home extends BaseController
                 'GENDER' => $gender,
                 'QR' => $hashQRCode,
                 'GRADE' => $grade,
+                'LRN' => $LRN,
                 'SECTION' => $section,
+                'NUM_OF_PRESENT' => 0,
+                'NUMBER_OF_ABSENCES' => 0,
+                'TOTAL_ATTENDANCE' => 200,
             ];
 
             $this->studentModel->save($student_data);
@@ -121,6 +128,14 @@ class Home extends BaseController
                 "LNAME" => $lName,
                 "AGE" => $age,
             ];
+
+            $data = [
+                "fname" => $fName,
+                "lname" => $lName,
+                "age" => $age,
+            ];
+
+            session()->set($data);
             $this->accountModel->update($id, $teacherData);
             session()->setFlashdata('update_teacher_info', "Teacher Account Updated Successfully");       
             return redirect()->to('teachersettings');

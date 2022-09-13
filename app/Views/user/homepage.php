@@ -118,7 +118,7 @@
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-success  float-center">Submit</button>
+            <button type="submit" class="btn btn-success  float-center" onclick="saveQRCODE()">Submit</button>
 
           </div>
         </div>

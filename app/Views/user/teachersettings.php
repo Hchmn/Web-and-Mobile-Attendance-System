@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-  <title>HOMEPAGE | STUDENT ATTENDANCE</title>
+  <title>HOMEPAGE | SETTINGS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
@@ -19,7 +17,6 @@
 </head>
 
 <body class=" ">
-
   <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar">
       <div class="p-4 pt-5">
@@ -28,7 +25,6 @@
           </a>
           <p class="mb-3 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
         </div>
-
         <ul class="list-unstyled components mb-5">
           <li>
             <a href="/user_homepage">Homepage</a>
@@ -146,9 +142,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php  
-                    
-                    ?>
                     <tr>
                         <th scope="row"><?php echo $userData['USERNAME']; ?> </th>
                         <th scope="row"><?php echo $userData['PASSWORD']; ?> </th>
@@ -172,12 +165,12 @@
                                             <div class="form-group " style="width:140%; height:120%;">
                                                 <div class="mb-2 w-100 d-flex align-items-center">
                                                     <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 fw-bold">USERNAME</label>
-                                                    <input type="text" name="username" placeholder="<?php echo $userData['USERNAME']; ?>" class="form-control w-100">
+                                                    <input type="text" name="username" placeholder="<?php echo $userData['USERNAME'];?>" value="<?php echo $userData['USERNAME'];?>" class="form-control w-100">
                                                     <input type="hidden" value="<?php echo session()->get('id');?>" name="id">
                                                 </div>
                                                 <div class="mb-2 w-100 d-flex align-items-center ">
-                                                    <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 fw-bold">PASSWORD</label>
-                                                    <input type="password" name="password" placeholder="<?php echo $userData['PASSWORD']; ?>" class="form-control w-100">
+                                                    <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 fw-bold" >PASSWORD</label>
+                                                    <input type="password" name="password" placeholder="<?php echo $userData['PASSWORD'];?>" value="<?php echo $userData['PASSWORD'];?>" class="form-control w-100">
                                                 </div>
                                             </div>
                                         </div>

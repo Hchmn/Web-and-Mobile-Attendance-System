@@ -25,6 +25,7 @@
           </a>
           <p class="mb-3 mt-3 text-center">Nasrollah L. Gandamato</p>
         </div>
+        
 
         <ul class="list-unstyled components mb-5">
           <li>
@@ -45,7 +46,7 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <h2 class="mb-2 fw-bold"><?php echo $yearName; ?>Student Records</h2>
+      <h2 class="mb-2 fw-bold"><?php echo $yearName." "; ?>Student Records</h2>
       <div class="table-responsive mt-5">
         <table class="table table-hover">
           <thead>

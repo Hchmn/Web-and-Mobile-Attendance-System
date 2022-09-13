@@ -1,0 +1,761 @@
+ERROR - 2022-09-09 09:38:29 --> Unknown column 'GRADE' in 'where clause'
+CRITICAL - 2022-09-09 09:38:29 --> Unknown column 'GRADE' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `gradesection`
+WHERE `GRADE` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `gradesection`
+WHERE `GRADE` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `gradesection`
+WHERE `GRADE` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `gradesection`
+WHERE `GRADE` = :GRADE:', [...], false)
+ 5 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(44): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_year('1')
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 09:39:31 --> Undefined property: stdClass::$YEAR
+in APPPATH\Views\user\sections\section.php on line 60.
+ 1 APPPATH\Views\user\sections\section.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$YEAR', 'APPPATH\\Views\\user\\sections\\section.php', 60)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\section.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/section', [], true)
+ 5 APPPATH\Controllers\Home.php(51): view('user/sections/section', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_year('2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 09:46:53 --> Undefined property: stdClass::$GRADE
+in APPPATH\Views\user\sections\section.php on line 60.
+ 1 APPPATH\Views\user\sections\section.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$GRADE', 'APPPATH\\Views\\user\\sections\\section.php', 60)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\section.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/section', [], true)
+ 5 APPPATH\Controllers\Home.php(50): view('user/sections/section', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:35:52 --> Invalid file: viewsection.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewsection.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('viewsection', [], true)
+ 3 APPPATH\Controllers\PdfController.php(11): view('viewsection')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:36:27 --> Invalid file: viewsection.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewsection.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('viewsection', [], true)
+ 3 APPPATH\Controllers\PdfController.php(11): view('viewsection')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:36:33 --> Invalid file: viewsection.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewsection.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('viewsection', [], true)
+ 3 APPPATH\Controllers\PdfController.php(11): view('viewsection')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:38:10 --> Invalid file: viewsection.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewsection.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('viewsection', [], true)
+ 3 APPPATH\Controllers\PdfController.php(11): view('viewsection')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:39:04 --> Invalid file: section/1/MERCURY.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('section/1/MERCURY.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/1/MERCURY', [], true)
+ 3 APPPATH\Controllers\PdfController.php(11): view('section/1/MERCURY')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:39:28 --> Invalid file: http://localhost:8080/section/1/MERCURY.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhost:8080/section/1/MERCURY.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('http://localhost:8080/section/1/MERCURY', [], true)
+ 3 APPPATH\Controllers\PdfController.php(11): view('http://localhost:8080/section/1/MERCURY')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:40:56 --> Undefined variable $sectionData
+in APPPATH\Views\user\sections\viewsection.php on line 70.
+ 1 APPPATH\Views\user\sections\viewsection.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sectionData', 'APPPATH\\Views\\user\\sections\\viewsection.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\viewsection.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewsection', [], true)
+ 5 APPPATH\Controllers\PdfController.php(11): view('user/sections/viewsection')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:43:51 --> Undefined variable $year
+in APPPATH\Controllers\PdfController.php on line 11.
+ 1 APPPATH\Controllers\PdfController.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year', 'APPPATH\\Controllers\\PdfController.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:44:01 --> Undefined variable $sectionData
+in APPPATH\Views\user\sections\viewsection.php on line 70.
+ 1 APPPATH\Views\user\sections\viewsection.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sectionData', 'APPPATH\\Views\\user\\sections\\viewsection.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\viewsection.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewsection', [], true)
+ 5 APPPATH\Controllers\PdfController.php(15): view('user/sections/viewsection')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:44:28 --> The PHP GD extension is required, but is not installed.
+in VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php on line 287.
+ 1 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(87): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhost:8080/assets/images/user_logo.png', 0.0, 1.1880000000000004, 0.0, 11.880000000000003, Object(Dompdf\Css\Style))
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Inline.php(56): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Inline), [...])
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(290): Dompdf\Renderer\Inline->render(Object(Dompdf\FrameDecorator\Inline))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('inline', Object(Dompdf\FrameDecorator\Inline))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Inline))
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 9 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+10 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+11 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(916): Dompdf\FrameReflower\Page->reflow(null)
+12 VENDORPATH\dompdf\dompdf\src\Dompdf.php(770): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+13 APPPATH\Controllers\PdfController.php(20): Dompdf\Dompdf->render()
+14 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+15 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+16 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:44:34 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 10:44:50 --> The PHP GD extension is required, but is not installed.
+in VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php on line 287.
+ 1 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(87): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhost:8080/assets/images/user_logo.png', 0.0, 1.1880000000000004, 0.0, 11.880000000000003, Object(Dompdf\Css\Style))
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Inline.php(56): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Inline), [...])
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(290): Dompdf\Renderer\Inline->render(Object(Dompdf\FrameDecorator\Inline))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('inline', Object(Dompdf\FrameDecorator\Inline))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Inline))
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 9 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+10 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+11 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(916): Dompdf\FrameReflower\Page->reflow(null)
+12 VENDORPATH\dompdf\dompdf\src\Dompdf.php(770): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+13 APPPATH\Controllers\PdfController.php(20): Dompdf\Dompdf->render()
+14 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+15 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+16 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:44:56 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 10:45:02 --> The PHP GD extension is required, but is not installed.
+in VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php on line 287.
+ 1 VENDORPATH\dompdf\dompdf\src\Renderer\AbstractRenderer.php(87): Dompdf\Renderer\AbstractRenderer->_background_image('http://localhost:8080/assets/images/user_logo.png', 0.0, 1.1880000000000004, 0.0, 11.880000000000003, Object(Dompdf\Css\Style))
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Inline.php(56): Dompdf\Renderer\AbstractRenderer->_render_background(Object(Dompdf\FrameDecorator\Inline), [...])
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(290): Dompdf\Renderer\Inline->render(Object(Dompdf\FrameDecorator\Inline))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(110): Dompdf\Renderer->_render_frame('inline', Object(Dompdf\FrameDecorator\Inline))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Inline))
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 9 VENDORPATH\dompdf\dompdf\src\Renderer.php(196): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+10 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+11 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(916): Dompdf\FrameReflower\Page->reflow(null)
+12 VENDORPATH\dompdf\dompdf\src\Dompdf.php(770): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+13 APPPATH\Controllers\PdfController.php(20): Dompdf\Dompdf->render()
+14 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->htmlToPDF()
+15 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+16 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 10:45:11 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 12:02:02 --> Undefined variable $year
+in APPPATH\Views\user\studentrecords.php on line 104.
+ 1 APPPATH\Views\user\studentrecords.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year', 'APPPATH\\Views\\user\\studentrecords.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\studentrecords.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/studentrecords', [], true)
+ 5 APPPATH\Controllers\Home.php(22): view('user/studentrecords', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_records()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:03:18 --> Undefined variable $getYear
+in APPPATH\Controllers\PdfController.php on line 28.
+ 1 APPPATH\Controllers\PdfController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getYear', 'APPPATH\\Controllers\\PdfController.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:03:35 --> Undefined variable $studentData
+in APPPATH\Views\student_data.php on line 20.
+ 1 APPPATH\Views\student_data.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'APPPATH\\Views\\student_data.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:04:02 --> Attempt to read property "QR" on array
+in APPPATH\Views\student_data.php on line 20.
+ 1 APPPATH\Views\student_data.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "QR" on array', 'APPPATH\\Views\\student_data.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:17:17 --> Undefined variable $qrCode
+in APPPATH\Views\student_data.php on line 36.
+ 1 APPPATH\Views\student_data.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $qrCode', 'APPPATH\\Views\\student_data.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:29:30 --> Class "QRCode" not found
+in APPPATH\Views\student_data.php on line 34.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:30:18 --> Class "Endroid\QrCode\QrCode" not found
+in APPPATH\Views\student_data.php on line 34.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:31:52 --> Call to undefined method Endroid\QrCode\QrCode::writeFile()
+in APPPATH\Views\student_data.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:32:19 --> Class "Endroid" not found
+in APPPATH\Views\student_data.php on line 46.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:37:48 --> Call to undefined method Endroid\QrCode\QrCode::writeFile()
+in APPPATH\Views\student_data.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:38:27 --> Object of class Endroid\QrCode\QrCode could not be converted to string
+in APPPATH\Views\student_data.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:42:08 --> Call to undefined method Endroid\QrCode\QrCode::getDataUri()
+in APPPATH\Views\student_data.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:43:11 --> Call to undefined method Endroid\QrCode\QrCode::getDataUri()
+in APPPATH\Views\student_data.php on line 35.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:44:04 --> Too few arguments to function Endroid\QrCode\QrCode::__construct(), 0 passed in C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\app\Views\student_data.php on line 34 and at least 1 expected
+in VENDORPATH\endroid\qr-code\src\QrCode.php on line 27.
+ 1 APPPATH\Views\student_data.php(34): Endroid\QrCode\QrCode->__construct()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:45:06 --> Too few arguments to function Endroid\QrCode\QrCode::__construct(), 0 passed in C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\app\Views\student_data.php on line 34 and at least 1 expected
+in VENDORPATH\endroid\qr-code\src\QrCode.php on line 27.
+ 1 APPPATH\Views\student_data.php(34): Endroid\QrCode\QrCode->__construct()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:45:44 --> Too few arguments to function Endroid\QrCode\QrCode::__construct(), 0 passed in C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\app\Views\student_data.php on line 34 and at least 1 expected
+in VENDORPATH\endroid\qr-code\src\QrCode.php on line 27.
+ 1 APPPATH\Views\student_data.php(34): Endroid\QrCode\QrCode->__construct()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:46:11 --> Call to undefined method Endroid\QrCode\QrCode::getDataUri()
+in APPPATH\Views\student_data.php on line 36.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(32): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:53:07 --> Attempt to read property "FIRSTNAME" on array
+in APPPATH\Controllers\PdfController.php on line 35.
+ 1 APPPATH\Controllers\PdfController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "FIRSTNAME" on array', 'APPPATH\\Controllers\\PdfController.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:56:27 --> Attempt to read property "FIRSTNAME" on array
+in APPPATH\Controllers\PdfController.php on line 35.
+ 1 APPPATH\Controllers\PdfController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "FIRSTNAME" on array', 'APPPATH\\Controllers\\PdfController.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:57:28 --> Attempt to read property "QR" on array
+in APPPATH\Controllers\PdfController.php on line 37.
+ 1 APPPATH\Controllers\PdfController.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "QR" on array', 'APPPATH\\Controllers\\PdfController.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:57:41 --> Endroid\QrCode\Writer\PngWriter::write(): Argument #1 ($qrCode) must be of type Endroid\QrCode\QrCodeInterface, string given, called in C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 45
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 22.
+ 1 APPPATH\Controllers\PdfController.php(45): Endroid\QrCode\Writer\PngWriter->write('Prince Calapre Anoos')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 12:59:25 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 25.
+ 1 APPPATH\Controllers\PdfController.php(45): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:04:33 --> Call to undefined method Endroid\QrCode\QrCode::move()
+in APPPATH\Controllers\PdfController.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:06:02 --> Call to undefined method Endroid\QrCode\QrCode::setWriterByExtension()
+in APPPATH\Controllers\PdfController.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:08:44 --> Undefined variable $QRCODE
+in APPPATH\Controllers\PdfController.php on line 57.
+ 1 APPPATH\Controllers\PdfController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $QRCODE', 'APPPATH\\Controllers\\PdfController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:09:13 --> Call to undefined method Endroid\QrCode\QrCode::setWriterByExtension()
+in APPPATH\Controllers\PdfController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:14:30 --> Undefined variable $writer
+in APPPATH\Controllers\PdfController.php on line 64.
+ 1 APPPATH\Controllers\PdfController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $writer', 'APPPATH\\Controllers\\PdfController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:16:06 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 25.
+ 1 APPPATH\Controllers\PdfController.php(64): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:28:31 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 25.
+ 1 APPPATH\Controllers\PdfController.php(64): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:28:40 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 25.
+ 1 APPPATH\Controllers\PdfController.php(64): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:30:02 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 25.
+ 1 APPPATH\Controllers\PdfController.php(64): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:32:22 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 25.
+ 1 APPPATH\Controllers\PdfController.php(64): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:44:11 --> Cannot call constructor
+in APPPATH\Controllers\PdfController.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\PdfController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:44:27 --> Undefined property: App\Controllers\PdfController::$load
+in APPPATH\Controllers\PdfController.php on line 14.
+ 1 APPPATH\Controllers\PdfController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PdfController::$load', 'APPPATH\\Controllers\\PdfController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\PdfController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 13:47:12 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 13:49:58 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:04:25 --> Undefined variable $imageUri
+in APPPATH\Views\student_data.php on line 27.
+ 1 APPPATH\Views\student_data.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imageUri', 'APPPATH\\Views\\student_data.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(74): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 14:05:43 --> Undefined constant "studentDATA"
+in APPPATH\Views\student_data.php on line 17.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(74): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 14:06:43 --> Undefined constant "studentDATA"
+in APPPATH\Views\student_data.php on line 17.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 4 APPPATH\Controllers\PdfController.php(74): view('student_data', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 14:26:50 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 573.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:28:26 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:31:03 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:35:51 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 573.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:42:55 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 573.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:44:05 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 573.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:45:42 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 573.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:49:25 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 573.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 14:53:29 --> Class "App\Controllers\Options" not found
+in APPPATH\Controllers\PdfController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 14:53:37 --> Class "App\Controllers\Option" not found
+in APPPATH\Controllers\PdfController.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:17:54 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:20:30 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:21:35 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:22:35 --> Undefined variable $imageSource
+in APPPATH\Views\student_data.php on line 15.
+ 1 APPPATH\Views\student_data.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imageSource', 'APPPATH\\Views\\student_data.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_data.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_data', [], true)
+ 5 APPPATH\Controllers\PdfController.php(78): view('student_data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:23:58 --> Undefined variable $pdf
+in APPPATH\Controllers\PdfController.php on line 77.
+ 1 APPPATH\Controllers\PdfController.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pdf', 'APPPATH\\Controllers\\PdfController.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:24:32 --> Undefined variable $dompdf
+in APPPATH\Controllers\PdfController.php on line 77.
+ 1 APPPATH\Controllers\PdfController.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dompdf', 'APPPATH\\Controllers\\PdfController.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:24:53 --> Call to undefined method Dompdf\Dompdf::getDomPDF()
+in APPPATH\Controllers\PdfController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:28:01 --> Class "App\Controllers\Dompdf" not found
+in APPPATH\Controllers\PdfController.php on line 77.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:29:53 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 573.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:39:37 --> getimagesize(file://C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\public\.): Failed to open stream: Permission denied
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 665.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.): Failed to open stream: Permission denied', 'VENDORPATH\\dompdf\\dompdf\\src\\Helpers.php', 665)
+ 2 VENDORPATH\dompdf\dompdf\src\Helpers.php(665): getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.')
+ 3 VENDORPATH\dompdf\dompdf\src\Image\Cache.php(127): Dompdf\Helpers::dompdf_getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.', resource (stream-context))
+ 4 VENDORPATH\dompdf\dompdf\src\FrameDecorator\Image.php(60): Dompdf\Image\Cache::resolve_url('<?phpbase_url().\'/uploads/qr-code/TESTER.png\';?>', 'file://', 'ROOTPATH\\public', 'ROOTPATH\\public', Object(Dompdf\Options))
+ 5 VENDORPATH\dompdf\dompdf\src\Frame\Factory.php(202): Dompdf\FrameDecorator\Image->__construct(Object(Dompdf\Frame), Object(Dompdf\Dompdf))
+ 6 VENDORPATH\dompdf\dompdf\src\Dompdf.php(736): Dompdf\Frame\Factory::decorate_frame(Object(Dompdf\Frame), Object(Dompdf\Dompdf), Object(Dompdf\FrameDecorator\Page))
+ 7 APPPATH\Controllers\PdfController.php(82): Dompdf\Dompdf->render()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:39:43 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:41:08 --> getimagesize(file://C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\public\.): Failed to open stream: Permission denied
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 665.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.): Failed to open stream: Permission denied', 'VENDORPATH\\dompdf\\dompdf\\src\\Helpers.php', 665)
+ 2 VENDORPATH\dompdf\dompdf\src\Helpers.php(665): getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.')
+ 3 VENDORPATH\dompdf\dompdf\src\Image\Cache.php(127): Dompdf\Helpers::dompdf_getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.', resource (stream-context))
+ 4 VENDORPATH\dompdf\dompdf\src\FrameDecorator\Image.php(60): Dompdf\Image\Cache::resolve_url('<?phpbase_url().\'/uploads/qr-code/626310.jng\';?>', 'file://', 'ROOTPATH\\public', 'ROOTPATH\\public', Object(Dompdf\Options))
+ 5 VENDORPATH\dompdf\dompdf\src\Frame\Factory.php(202): Dompdf\FrameDecorator\Image->__construct(Object(Dompdf\Frame), Object(Dompdf\Dompdf))
+ 6 VENDORPATH\dompdf\dompdf\src\Dompdf.php(736): Dompdf\Frame\Factory::decorate_frame(Object(Dompdf\Frame), Object(Dompdf\Dompdf), Object(Dompdf\FrameDecorator\Page))
+ 7 APPPATH\Controllers\PdfController.php(82): Dompdf\Dompdf->render()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:41:14 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:42:34 --> getimagesize(file://C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\public\.): Failed to open stream: Permission denied
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 665.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.): Failed to open stream: Permission denied', 'VENDORPATH\\dompdf\\dompdf\\src\\Helpers.php', 665)
+ 2 VENDORPATH\dompdf\dompdf\src\Helpers.php(665): getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.')
+ 3 VENDORPATH\dompdf\dompdf\src\Image\Cache.php(127): Dompdf\Helpers::dompdf_getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.', resource (stream-context))
+ 4 VENDORPATH\dompdf\dompdf\src\FrameDecorator\Image.php(60): Dompdf\Image\Cache::resolve_url('<?phpbase_url().\'/uploads/qr-code/123.png\';?>', 'file://', 'ROOTPATH\\public', 'ROOTPATH\\public', Object(Dompdf\Options))
+ 5 VENDORPATH\dompdf\dompdf\src\Frame\Factory.php(202): Dompdf\FrameDecorator\Image->__construct(Object(Dompdf\Frame), Object(Dompdf\Dompdf))
+ 6 VENDORPATH\dompdf\dompdf\src\Dompdf.php(736): Dompdf\Frame\Factory::decorate_frame(Object(Dompdf\Frame), Object(Dompdf\Dompdf), Object(Dompdf\FrameDecorator\Page))
+ 7 APPPATH\Controllers\PdfController.php(82): Dompdf\Dompdf->render()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:42:40 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:44:47 --> getimagesize(file://C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\public\.): Failed to open stream: Permission denied
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 665.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.): Failed to open stream: Permission denied', 'VENDORPATH\\dompdf\\dompdf\\src\\Helpers.php', 665)
+ 2 VENDORPATH\dompdf\dompdf\src\Helpers.php(665): getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.')
+ 3 VENDORPATH\dompdf\dompdf\src\Image\Cache.php(127): Dompdf\Helpers::dompdf_getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.', resource (stream-context))
+ 4 VENDORPATH\dompdf\dompdf\src\FrameDecorator\Image.php(60): Dompdf\Image\Cache::resolve_url('<?phpbase_url().\'/uploads/qr-code/123.png\';?>', 'file://', 'ROOTPATH\\public', 'ROOTPATH\\public', Object(Dompdf\Options))
+ 5 VENDORPATH\dompdf\dompdf\src\Frame\Factory.php(202): Dompdf\FrameDecorator\Image->__construct(Object(Dompdf\Frame), Object(Dompdf\Dompdf))
+ 6 VENDORPATH\dompdf\dompdf\src\Dompdf.php(736): Dompdf\Frame\Factory::decorate_frame(Object(Dompdf\Frame), Object(Dompdf\Dompdf), Object(Dompdf\FrameDecorator\Page))
+ 7 APPPATH\Controllers\PdfController.php(85): Dompdf\Dompdf->render()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:45:18 --> Allowed memory size of 1073741824 bytes exhausted (tried to allocate 530583552 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-09 15:46:19 --> getimagesize(file://C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\public\.): Failed to open stream: Permission denied
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 665.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.): Failed to open stream: Permission denied', 'VENDORPATH\\dompdf\\dompdf\\src\\Helpers.php', 665)
+ 2 VENDORPATH\dompdf\dompdf\src\Helpers.php(665): getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.')
+ 3 VENDORPATH\dompdf\dompdf\src\Image\Cache.php(127): Dompdf\Helpers::dompdf_getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.', resource (stream-context))
+ 4 VENDORPATH\dompdf\dompdf\src\FrameDecorator\Image.php(60): Dompdf\Image\Cache::resolve_url('<?phpbase_url().\'/uploads/qr-code/123.png\';?>', 'file://', 'ROOTPATH\\public', 'ROOTPATH\\public', Object(Dompdf\Options))
+ 5 VENDORPATH\dompdf\dompdf\src\Frame\Factory.php(202): Dompdf\FrameDecorator\Image->__construct(Object(Dompdf\Frame), Object(Dompdf\Dompdf))
+ 6 VENDORPATH\dompdf\dompdf\src\Dompdf.php(736): Dompdf\Frame\Factory::decorate_frame(Object(Dompdf\Frame), Object(Dompdf\Dompdf), Object(Dompdf\FrameDecorator\Page))
+ 7 APPPATH\Controllers\PdfController.php(85): Dompdf\Dompdf->render()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:49:28 --> getimagesize(file://C:\Users\Solutions Resource\Projects\Web-and-Mobile-Attendance-System\public\.): Failed to open stream: Permission denied
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 665.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.): Failed to open stream: Permission denied', 'VENDORPATH\\dompdf\\dompdf\\src\\Helpers.php', 665)
+ 2 VENDORPATH\dompdf\dompdf\src\Helpers.php(665): getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.')
+ 3 VENDORPATH\dompdf\dompdf\src\Image\Cache.php(127): Dompdf\Helpers::dompdf_getimagesize('file://C:\\Users\\Solutions Resource\\Projects\\Web-and-Mobile-Attendance-System\\public\\.', resource (stream-context))
+ 4 VENDORPATH\dompdf\dompdf\src\FrameDecorator\Image.php(60): Dompdf\Image\Cache::resolve_url('<?phpbase_url().\'/uploads/qr-code/123.png\';?>', 'file://', 'ROOTPATH\\public', 'ROOTPATH\\public', Object(Dompdf\Options))
+ 5 VENDORPATH\dompdf\dompdf\src\Frame\Factory.php(202): Dompdf\FrameDecorator\Image->__construct(Object(Dompdf\Frame), Object(Dompdf\Dompdf))
+ 6 VENDORPATH\dompdf\dompdf\src\Dompdf.php(736): Dompdf\Frame\Factory::decorate_frame(Object(Dompdf\Frame), Object(Dompdf\Dompdf), Object(Dompdf\FrameDecorator\Page))
+ 7 APPPATH\Controllers\PdfController.php(84): Dompdf\Dompdf->render()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-09 15:49:34 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

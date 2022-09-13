@@ -49,32 +49,47 @@
       <div class="searchbar mb-3 mt-4  justify-content-between align-items-center">
         <input class="form-control rounded-pill border border-dark" type="text" id="searchData" placeholder="Search.." style="width:250px;">
       </div>
+      <div class="d-flex mb-3 bd-highlight">
+          <a href="/convertToPDF<?php echo "/".$year."/".$section?>" class="btn btn-success">
+            Download PDF
+          </a>
+      </div>
+
       <div class="table-responsive  ">
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col" class="fs-6">#</th>
+              <th scope="col" class="fs-6">LRN</th>
               <th scope="col" class="fs-6">First Name</th>
               <th scope="col" class="fs-6">Last Name</th>
               <th scope="col" class="fs-6">AGE</th>
               <th scope="col" class="fs-6">GENDER</th>
+              <th scope="col" class="fs-6">NUM OF ABSENCES</th>
+              <th scope="col" class="fs-6">NUM OF DAYS PRESENT</th>
+              <th scope="col" class="fs-6">TOTAL ATTENDANCE</th>
             </tr>
           </thead>
 
           <tbody id="tableBody">
             <?php foreach ($sectionData->getResult() as  $student) {
-              $ID = $student->ID;
+              $ID = $student->LRN;
               $studentFNAME = $student->FIRSTNAME;
               $studentLNAME = $student->LASTNAME;
               $studentAGE = $student->AGE;
               $studentGENDER = ($student->GENDER == 1) ? "Male" : "Female";
+              $absences = $student->NUMBER_OF_ABSENCES;
+              $present = $student->NUM_OF_PRESENT;
+              $total_attendance = $student->TOTAL_ATTENDANCE;        
             ?>
               <tr>
                 <td><?php echo $ID; ?></td>
                 <td><?php echo $studentFNAME ?></td>
                 <td><?php echo $studentLNAME ?></td>
                 <td><?php echo $studentAGE  ?></td>
-                <td><?php echo  $studentGENDER ?></td>
+                <td><?php echo $studentGENDER ?></td>
+                <td><?php echo $absences ?></td>
+                <td><?php echo $present ?></td>
+                <td><?php echo $total_attendance?></td>
               </tr>
             <?php } ?>
           </tbody>
