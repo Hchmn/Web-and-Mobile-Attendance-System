@@ -43,6 +43,17 @@
             <a href="teachersettings">Settings</a>
           </li>
           <li>
+            <a href="notification" class="notification">
+                <span>Notification</span>
+                <?php if(session()->has("notification_number")):?>
+                  <span class="badge"><?php echo session()->get("notification_number")?></span>
+                <?php endif; ?>
+                <?php if(!(session()->has("notification_number"))): ?>
+                  <span class="badge">0</span>
+                <?php endif; ?>
+            </a>
+          </li>
+          <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
           </li>
         </ul>
@@ -51,7 +62,7 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <h2 class="mb-2 fw-bold">Student Records</h2>
+      <h2 class="mb-2 fw-bold">School Events</h2>
       <div class="searchbar mb-3 mt-4  justify-content-between align-items-center">
         <input class="form-control rounded-pill border border-dark" type="text" id="searchData" placeholder="Search.." style="width:250px;">
       </div>

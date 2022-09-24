@@ -9,5 +9,5 @@ class Account extends Model
   protected $table = 'account';
 
   protected $primaryKey = 'ID';
-  protected $allowedFields = ['USERNAME', 'PASSWORD', 'FNAME', 'LNAME', 'AGE', 'USERTYPE', 'DATE'];
+  protected $allowedFields = ['USERNAME', 'PASSWORD', 'FNAME', 'LNAME', 'AGE', 'USERTYPE', 'DATE', 'CLASS_ID'];
 }

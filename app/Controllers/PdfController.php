@@ -29,7 +29,7 @@ class PdfController extends BaseController{
         $dompdf->stream(); 
     }
 
-    public function studenHTMLTOPDF($id = 0,){
+    public function studenHTMLTOPDF($id = 0){
        
         $getID = $id;
         $queryBuilder = $this->studentModel->where("ID", $getID)->first();

@@ -7,7 +7,22 @@ class Home extends BaseController
 {
     public function homepage()
     {
-
+        if(session()->has('classID')){
+            $class_id = session()->get('classID');
+            $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
+                ->first();
+                if($queryBuilder){
+                    $grade = $queryBuilder['YEAR'];
+                    $section = $queryBuilder['SECTION'];
+                    $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->get();
+                    $notification = $this->studentModel->select("*")->where("GRADE", $grade)->WHERE("SECTION", $section)->WHERE("STATUS", 1)->countAllResults(); 
+                    $data = [
+                        "notification_number" => $notification
+                    ];
+                    session()->set($data);
+                    return view('user/homepage');
+                }
+        }
         return view('user/homepage');
     }
 
@@ -157,5 +172,47 @@ class Home extends BaseController
             return redirect()->to('teachersettings');
         }
     }
+
+    public function notification(){
+        if(session()->has('classID')){
+            $class_id = session()->get('classID');
+            $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
+                ->first();
+                if($queryBuilder){
+                    $grade = $queryBuilder['YEAR'];
+                    $section = $queryBuilder['SECTION'];
+                    $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->get();
+                    $notification = $this->studentModel->select("*")->where("GRADE", $grade)->WHERE("SECTION", $section)->WHERE("STATUS", 1)->countAllResults();
+                    $data = [
+                        "studentData" => $getStudents,
+                    ];
+                    session()->set("notification_number", $notification);
+                    session()->set("studentData", true);
+                    return view ('user/notification', $data);
+                }
+        }
+        session()->set("studentData", false);
+        return view('user/notification', );
+    }
+
+    public function update_student_status(){
+        if($this->request->getMethod() == "post"){
+            $id = $this->request->getVar('id');
+            $status = $this->request->getVar('status');
+            if($status == "1" || $status == "0"){
+                $studentDATA = [
+                    "STATUS" => $status
+                ];
+                $this->studentModel->update($id, $studentDATA);
+                session()->setFlashdata('success_update', true);
+            }
+            else{
+                session()->setFlashdata('failed_update', true);
+            }
+            
+            return redirect()->to('notification');
+            
+    }
+}
 
 }

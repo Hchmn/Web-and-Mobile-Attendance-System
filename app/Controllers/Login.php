@@ -61,6 +61,7 @@ class Login extends BaseController
       'lname' => $user['LNAME'],
       'age' => $user['AGE'],
       'usertype' => $user['USERTYPE'],
+      'classID' => $user['CLASS_ID'],
     ];
 
     session()->set($data);

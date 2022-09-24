@@ -8286,3 +8286,21 @@ a[data-toggle="collapse"] {
 
 .footer p {
   color: rgba(255, 255, 255, 0.5); }
+
+.notification {
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification .badge {
+  position: absolute;
+  top: 6px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}

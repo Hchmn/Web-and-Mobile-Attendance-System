@@ -50,6 +50,8 @@ $routes->get('section/(:any)', 'Home::student_section/$1');
 $routes->post('update_teacher', 'Home::update_teacher_info');
 $routes->post('update_teacher_account', 'Home::update_teacher_account');
 $routes->post('register', 'Home::add_student');
+$routes->get('notification', 'Home::notification');
+$routes->post('update_student_status', 'Home::update_student_status');
 
 
 

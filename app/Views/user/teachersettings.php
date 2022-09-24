@@ -42,6 +42,17 @@
             <a href="teachersettings">Settings</a>
           </li>
           <li>
+            <a href="notification" class="notification">
+                <span>Notification</span>
+                <?php if(session()->has("notification_number")):?>
+                  <span class="badge"><?php echo session()->get("notification_number")?></span>
+                <?php endif; ?>
+                <?php if(!(session()->has("notification_number"))): ?>
+                  <span class="badge">0</span>
+                <?php endif; ?>
+            </a>
+          </li>
+          <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
           </li>
         </ul>
@@ -80,7 +91,7 @@
                             border-color: #007bff;">
                         UPDATE
                     </button>
-                    <!-- Modal -->
+                  <!-- Modal -->
                   <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -131,7 +142,7 @@
         <div class="alert alert-success w-100">
           Teacher Account Successfully Updated
         </div>
-      <?php endif; ?>
+        <?php endif; ?>
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
