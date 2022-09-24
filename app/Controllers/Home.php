@@ -89,7 +89,7 @@ class Home extends BaseController
             $grade = $this->request->getVar('grade');
             $section = $this->request->getVar('section');
 
-            $qrCode = $fName . " " . $lName . " " . $mName;
+            $qrCode = $fName . " " . $lName . " " . $mName . " " .$LRN . " " . $gender . " " . $grade . " " . $section;
             $hashQRCode  = password_hash($qrCode, PASSWORD_DEFAULT);
             echo $fName;
             $student_data = [

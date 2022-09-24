@@ -40,12 +40,12 @@ class PdfController extends BaseController{
         $section = $queryBuilder['SECTION'];
         $gender = $queryBuilder['GENDER'];
         $LRN = $queryBuilder['LRN'];
-        $qr = $fName . " " . $lName . " " . $mName;
+        $qr = $fName . " " . $lName . " " . $mName . " " .$LRN . " " . $gender . " " . $grade . " " . $section;;
         $decryptedQRCode = password_verify($qr, $queryBuilder['QR']);
         if ($decryptedQRCode) {
             $qrCode = $qr;
         } else {
-            $qrCode = null;
+            $qrCode = null; 
         }
         $qrCode = ($decryptedQRCode) ? $qr : null;
         $options = new QROptions(

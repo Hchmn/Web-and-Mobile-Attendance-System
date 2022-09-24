@@ -23,7 +23,6 @@
               <th scope="col" class="fs-6">TOTAL ATTENDANCE</th>
             </tr>
           </thead>
-
           <tbody id="tableBody">
             <?php foreach ($sectionData->getResult() as  $student) {
               $ID = $student->LRN;

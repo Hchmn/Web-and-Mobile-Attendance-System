@@ -78,8 +78,9 @@
               $fName = $student->FIRSTNAME;
               $lName = $student->LASTNAME;
               $Grade = $student->GRADE;
+              $gender = $student->GENDER;
               $Section = $student->SECTION;
-              $qr = $fName . " " . $lName . " " . $student->MIDDLENAME;
+              $qr = $fName . " " . $lName . " " . $student->MIDDLENAME . " " . $LRN . " " . $gender . " " . $Grade . " " . $Section;
 
               $decryptedQRCode = password_verify($qr, $student->QR);
               $qrCode = ($decryptedQRCode) ? $qr : null;
