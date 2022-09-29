@@ -1,0 +1,150 @@
+CRITICAL - 2022-09-27 08:52:00 --> Undefined variable: student
+in APPPATH\Views\user\attendance.php on line 71.
+ 1 APPPATH\Views\user\attendance.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student', 'APPPATH\\Views\\user\\attendance.php', 71, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/attendance', [], true)
+ 5 APPPATH\Controllers\Home.php(219): view('user/attendance')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 08:58:08 --> Undefined variable: student
+in APPPATH\Views\user\attendance.php on line 71.
+ 1 APPPATH\Views\user\attendance.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: student', 'APPPATH\\Views\\user\\attendance.php', 71, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/attendance', [], true)
+ 5 APPPATH\Controllers\Home.php(219): view('user/attendance')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 09:20:42 --> Undefined variable: class_id
+in APPPATH\Controllers\Home.php on line 225.
+ 1 APPPATH\Controllers\Home.php(225): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: class_id', 'APPPATH\\Controllers\\Home.php', 225, [])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->add_attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 09:21:14 --> Call to undefined function App\Controllers\to()
+in APPPATH\Controllers\Home.php on line 247.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->add_attendance()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 09:32:10 --> Undefined property: App\Controllers\Home::$studetAttendance
+in APPPATH\Controllers\Home.php on line 220.
+ 1 APPPATH\Controllers\Home.php(220): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Home::$studetAttendance', 'APPPATH\\Controllers\\Home.php', 220, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 09:37:25 --> Undefined variable: data
+in APPPATH\Controllers\Home.php on line 225.
+ 1 APPPATH\Controllers\Home.php(225): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Controllers\\Home.php', 225, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:00:37 --> Call to undefined method App\Controllers\Home::select()
+in APPPATH\Controllers\Home.php on line 229.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:01:02 --> Call to undefined method App\Models\Student::getResult
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Home.php(229): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:02:09 --> Trying to get property 'FIRSTNAME' of non-object
+in APPPATH\Controllers\Home.php on line 231.
+ 1 APPPATH\Controllers\Home.php(231): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'FIRSTNAME\' of non-object', 'APPPATH\\Controllers\\Home.php', 231, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:02:42 --> Undefined index: FIRSTNAME
+in APPPATH\Controllers\Home.php on line 231.
+ 1 APPPATH\Controllers\Home.php(231): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: FIRSTNAME', 'APPPATH\\Controllers\\Home.php', 231, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:04:51 --> Undefined offset: 0
+in APPPATH\Controllers\Home.php on line 231.
+ 1 APPPATH\Controllers\Home.php(231): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Home.php', 231, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:05:34 --> Trying to get property 'FIRSTNAME' of non-object
+in APPPATH\Controllers\Home.php on line 231.
+ 1 APPPATH\Controllers\Home.php(231): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'FIRSTNAME\' of non-object', 'APPPATH\\Controllers\\Home.php', 231, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:06:08 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$getResult
+in APPPATH\Controllers\Home.php on line 230.
+ 1 APPPATH\Controllers\Home.php(230): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$getResult', 'APPPATH\\Controllers\\Home.php', 230, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:06:27 --> Trying to get property 'FIRSTNAME' of non-object
+in APPPATH\Controllers\Home.php on line 231.
+ 1 APPPATH\Controllers\Home.php(231): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'FIRSTNAME\' of non-object', 'APPPATH\\Controllers\\Home.php', 231, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:09:12 --> Call to undefined method App\Models\Student::getRow
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Home.php(229): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:10:04 --> Use of undefined constant x - assumed 'x' (this will throw an Error in a future version of PHP)
+in APPPATH\Views\user\attendance.php on line 127.
+ 1 APPPATH\Views\user\attendance.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant x - assumed \'x\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Views\\user\\attendance.php', 127, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/attendance', [], true)
+ 5 APPPATH\Controllers\Home.php(243): view('user/attendance', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-27 10:10:40 --> Use of undefined constant x - assumed 'x' (this will throw an Error in a future version of PHP)
+in APPPATH\Views\user\attendance.php on line 129.
+ 1 APPPATH\Views\user\attendance.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant x - assumed \'x\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Views\\user\\attendance.php', 129, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/attendance', [], true)
+ 5 APPPATH\Controllers\Home.php(243): view('user/attendance', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->attendance()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

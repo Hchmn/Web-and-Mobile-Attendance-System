@@ -52,6 +52,8 @@ $routes->post('update_teacher_account', 'Home::update_teacher_account');
 $routes->post('register', 'Home::add_student');
 $routes->get('notification', 'Home::notification');
 $routes->post('update_student_status', 'Home::update_student_status');
+$routes->get('attendance', 'Home::attendance');
+$routes->post('add_attendance', 'Home::add_attendance');
 
 
 

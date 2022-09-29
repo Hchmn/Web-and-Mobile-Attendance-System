@@ -26,7 +26,8 @@
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
           </a>
-          <p class="mb-3 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mb-0 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mt-0 text-center text-primary fw-bold">Teacher</p>
         </div>
 
         <ul class="list-unstyled components mb-5">
@@ -37,7 +38,7 @@
             <a href="studentrecords">Student Records</a>
           </li>
           <li>
-            <a href="studentattendance">Load Students Attendance</a>
+            <a href="studentattendance">Year Level Records</a>
           </li>
           <li>
             <a href="event">Event/ Upcoming Event</a>
@@ -46,7 +47,10 @@
             <a href="teachersettings">Settings</a>
           </li>
           <li>
-            <a href="notification" class="notification">
+              <a href="attendance">Attendance</a>
+          </li>
+          <li>
+            <a href="notification" class="notification text-warning">
                 <span>Notification</span>
                 <?php if(session()->has("notification_number")):?>
                   <span class="badge"><?php echo session()->get("notification_number")?></span>
@@ -65,7 +69,7 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-        <h2 class="mb-2 fw-bold">Student Status Notification</h2>
+        <h1 class="mb-2 fw-bold text-info">Student Status Notification</h1>
         <div class="searchbar mb-3 mt-4  justify-content-between align-items-center">
             <input class="form-control rounded-pill border border-dark" type="text" id="searchData" placeholder="Search.." style="width:250px;">
         </div>
@@ -111,7 +115,7 @@
                         border-color: #007bff;">
                             UPDATE
                     </button>
-                    <!-- Modal -->
+                  <!-- Modal -->
                   <div class="modal fade" id="Edit<?php echo $student->ID;?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">

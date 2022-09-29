@@ -23,7 +23,8 @@
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
           </a>
-          <p class="mb-3 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mb-0 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mt-0 text-center text-primary fw-bold">Teacher</p>
         </div>
         <ul class="list-unstyled components mb-5">
           <li>
@@ -33,13 +34,16 @@
             <a href="studentrecords">Student Records</a>
           </li>
           <li>
-            <a href="studentattendance">Load Students Attendance</a>
+            <a href="studentattendance">Year Level Records</a>
           </li>
           <li>
             <a href="event">Event/ Upcoming Event</a>
           </li>
           <li>
-            <a href="teachersettings">Settings</a>
+            <a href="teachersettings" class="text-warning">Settings</a>
+          </li>
+          <li>
+              <a href="attendance">Attendance</a>
           </li>
           <li>
             <a href="notification" class="notification">
@@ -61,13 +65,13 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <h2 class="mb-2 fw-bold">Personal Information</h2>
+      <h1 class="fw-bold text-info">Personal Information</h1>
       <?php if (session()->has('update_teacher_info')) : ?>
         <div class="alert alert-success w-100">
         Teacher Information Successfully Updated
         </div>
       <?php endif; ?>
-      <div class="table-responsive mt-5 ">
+      <div class="table-responsive mt-3">
         <table class="table table-hover">
           <thead>
             <tr>
@@ -78,9 +82,6 @@
             </tr>
           </thead>
           <tbody>
-            <?php  
-               
-            ?>
             <tr>
                 <th scope="row"><?php echo $userData['FNAME']; ?> </th>
                 <th scope="row"><?php echo $userData['LNAME']; ?> </th>
@@ -137,7 +138,7 @@
           </tbody>
         </table>
 
-        <h2 class="mb-2 mt-5 fw-bold">Account Information</h2>
+        <h1 class="mb-2 mt-5 fw-bold text-info">Account Information</h1>
         <?php if (session()->has('update_teacher_account')) : ?>
         <div class="alert alert-success w-100">
           Teacher Account Successfully Updated

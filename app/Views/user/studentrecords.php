@@ -24,7 +24,8 @@
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
           </a>
-          <p class="mb-3 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mb-0 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mt-0 text-center text-primary fw-bold">Teacher</p>
         </div>
 
         <ul class="list-unstyled components mb-5">
@@ -32,16 +33,19 @@
             <a href="user_homepage">Homepage</a>
           </li>
           <li>
-            <a href="studentrecords">Student Records</a>
+            <a href="studentrecords" class="text-warning">Student Records</a>
           </li>
           <li>
-            <a href="studentattendance">Load Students Attendance</a>
+            <a href="studentattendance">Year Level Records</a>
           </li>
           <li>
             <a href="event">Event/ Upcoming Event</a>
           </li>
           <li>
             <a href="teachersettings">Settings</a>
+          </li>
+          <li>
+              <a href="attendance">Attendance</a>
           </li>
           <li>
             <a href="notification" class="notification">
@@ -63,7 +67,7 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <h2 class="mb-2 fw-bold">Student Records</h2>
+      <h1 class="mb-2 fw-bold text-info">Student Records</h1>
       <div class="searchbar mb-3 mt-4  justify-content-between align-items-center">
         <input class="form-control rounded-pill border border-dark" type="text" id="searchData" placeholder="Search.." style="width:250px;">
       </div>
@@ -81,7 +85,7 @@
               <th scope="col" class="qr-code fs-6">ACTION</th>
             </tr>
           </thead>
-
+          <?php if(count($studentData->getResult()) > 0): ?>
           <tbody id="tableBody">
             <?php foreach ($studentData->getResult() as $student) {
               $LRN = $student->LRN;
@@ -117,16 +121,27 @@
               </tr>
             <?php } ?>
           </tbody>
-
+          <?php endif; ?>
+          <?php if(count($studentData->getResult()) == 0):?>
+          <tbody id="tableBody">
+            <tr>
+              <td class="text-danger fw-bold">N/A</td>
+              <td class="text-danger fw-bold">N/A</td>
+              <td class="text-danger fw-bold">N/A</td>
+              <td class="text-danger fw-bold">N/A</td>
+              <td class="text-danger fw-bold">N/A</td>
+              <td class="text-danger fw-bold">N/A</td>
+              <td class="text-danger fw-bold">N/A</td>
+            </tr>
+          </tbody>
+          <?php endif; ?>
         </table>
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
-
 <script>
   $('#searchData').on('keyup', function() {
     var value = $(this).val().toLowerCase();

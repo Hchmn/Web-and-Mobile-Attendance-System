@@ -24,24 +24,28 @@
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
           </a>
-          <p class="mb-3 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mb-0 mt-3 text-center"><?php echo session()->get('fname') . " " . session()->get('lname') ?></p>
+          <p class="mt-0 text-center text-primary fw-bold">Teacher</p>
         </div>
 
         <ul class="list-unstyled components mb-5">
           <li>
-            <a href="user_homepage">Homepage</a>
+            <a href="user_homepage" class="text-warning">Homepage</a>
           </li>
           <li>
             <a href="studentrecords">Student Records</a>
           </li>
           <li>
-            <a href="studentattendance">Load Students Attendance</a>
+            <a href="studentattendance">Year Level Records</a>
           </li>
           <li>
             <a href="event">Event/ Upcoming Event</a>
           </li>
           <li>
             <a href="teachersettings">Settings</a>
+          </li>
+          <li>
+            <a href="attendance">Attendance</a>
           </li>
           <li>
             <a href="notification" class="notification">
@@ -60,39 +64,37 @@
         </ul>
       </div>
     </nav>
-
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <h2 class="mb-2 fw-bold">Add Student</h2>
+      <h1 class="mb-2 fw-bold text-info">Add Student</h1>
       <p class="text-danger">Kindly fill up the student information here</p>
       <?php if (session()->has('registered')) : ?>
         <div class="alert alert-success w-25">
           Student successfully added!
         </div>
-      <?php endif; ?>
-
+      <?php endif;?>
       <form action="/register" method="post">
-        <div class="row row-cols-2">
+        <div class="row row-cols-2 border-top ">
           <!-- FIRST COLUMN -->
-          <div class="col mt-3 ">
+          <div class="col mt-3">
             <div class="mb-2 w-100">
               <label for="exampleInputEmail1" class="form-label fs-6">FIRST NAME</label>
-              <input type="text" name="firstname" id="firstname" class="form-control w-50">
+              <input type="text" name="firstname" id="firstname" class="form-control w-50" required>
             </div>
 
             <div class="mb-2 w-100">
               <label for="exampleInputEmail1" class="form-label fs-6">LASTNAME</label>
-              <input type="text" name="lastname" id="lastname" class="form-control w-50">
+              <input type="text" name="lastname" id="lastname" class="form-control w-50" required>
             </div>
 
             <div class="mb-2 w-100">
               <label for="exampleInputEmail1" class="form-label fs-6">MIDDLE NAME</label>
-              <input type="text" name="middlename" class="form-control w-50">
+              <input type="text" name="middlename" class="form-control w-50" required>
             </div>
 
             <div class="mb-2 w-100">
               <label for="exampleInputEmail1" class="form-label fs-6">AGE</label>
-              <input type="text" name="age" class="form-control w-50">
+              <input type="text" name="age" class="form-control w-50" required>
             </div>
 
             <div class="mb-2 w-100">
