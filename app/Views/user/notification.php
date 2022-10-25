@@ -32,7 +32,10 @@
 
         <ul class="list-unstyled components mb-5">
           <li>
-            <a href="user_homepage">Homepage</a>
+            <a href="event">Event/ Upcoming Event</a>
+          </li>
+          <li>
+            <a href="user_homepage">Add Student</a>
           </li>
           <li>
             <a href="studentrecords">Student Records</a>
@@ -41,13 +44,10 @@
             <a href="studentattendance">Year Level Records</a>
           </li>
           <li>
-            <a href="event">Event/ Upcoming Event</a>
-          </li>
-          <li>
             <a href="teachersettings">Settings</a>
           </li>
           <li>
-              <a href="attendance">Attendance</a>
+              <a href="section_list">Attendance</a>
           </li>
           <li>
             <a href="notification" class="notification text-warning">

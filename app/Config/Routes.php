@@ -54,6 +54,9 @@ $routes->get('notification', 'Home::notification');
 $routes->post('update_student_status', 'Home::update_student_status');
 $routes->get('attendance', 'Home::attendance');
 $routes->post('add_attendance', 'Home::add_attendance');
+$routes->get('section_list', 'Home::section_list');
+$routes->get('gradeSection/(:any)', 'Home::section_attendance/$1');
+$routes->post('add_section_attendance', 'Home::add_section_attendance');
 
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>HOMEPAGE | EVENT</title>
+  <title>STUDENT ATTENDANCE | YEAR & SECTION</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,7 +18,7 @@
 <body class=" ">
 
   <div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
+  <nav id="sidebar">
       <div class="p-4 pt-5">
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
@@ -29,25 +29,25 @@
 
         <ul class="list-unstyled components mb-5">
           <li>
-            <a href="event" class="text-warning">Event/ Upcoming Event</a>
+            <a href="/event">Event/ Upcoming Event</a>
           </li>
           <li>
-            <a href="user_homepage">Add Student</a>
+            <a href="/user_homepage">Add Student</a>
           </li>
           <li>
-            <a href="studentrecords">Student Records</a>
+            <a href="/studentrecords">Student Records</a>
           </li>
           <li>
-              <a href="studentattendance">Year Level Records</a>
+            <a href="/studentattendance">Year Level Records</a>
           </li>
           <li>
-            <a href="teachersettings">Settings</a>
+            <a href="/teachersettings">Settings</a>
           </li>
           <li>
-              <a href="section_list">Attendance</a>
+            <a href="/section_list" class="text-warning">Attendance</a>
           </li>
           <li>
-            <a href="notification" class="notification">
+            <a href="/notification" class="notification">
                 <span>Notification</span>
                 <?php if(session()->has("notification_number")):?>
                   <span class="badge"><?php echo session()->get("notification_number")?></span>
@@ -66,36 +66,37 @@
 
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
-      <h1 class="mb-2 fw-bold text-info">School Events</h1>
-      <div class="searchbar mb-3 mt-4  justify-content-between align-items-center">
-        <input class="form-control rounded-pill border border-dark" type="text" id="searchData" placeholder="Search.." style="width:250px;">
-      </div>
-      <div class="table-responsive  ">
+    <h1 class="mb-2 fw-bold text-info">Grade & Sections</h1>
+      <div class="table-responsive mt-5">
         <table class="table table-hover">
           <thead>
+            
             <tr>
-              <th scope="col" class="fs-6">#</th>
-              <th scope="col" class="fs-6">Name Of Event</th>
-              <th scope="col" class="fs-6">Date and Time</th>
-              <th scope="col" class="fs-6">Event Venue</th>
+              <th scope="col" class="fs-6">Section Name</th>
+              <th scope="col" class="fs-6">Year Level</th>
+              <th scope="col" class="fs-6">Action</th>
             </tr>
           </thead>
-
-          <tbody id="tableBody">
-            <?php foreach ($eventData->getResult() as  $event) {
-              $ID = $event->ID;
-              $eventNAME = $event->NAME;
-              $eventVENUE = $event->VENUE;
-              $eventSCHEDULE = $event->SCHEDULE;
-            ?>
-              <tr>
-                <td><?php echo $ID; ?></td>
-                <td><?php echo $eventNAME ?></td>
-                <td><?php echo $eventSCHEDULE ?></td>
-                <td><?php echo $eventVENUE ?></td>
-              </tr>
-            <?php } ?>
-
+          <tbody>
+            <?php if($isSection):?>
+                <?php for($x = 0; $x < sizeof($sectionList); $x++){
+                    $sectionName = $sectionList[$x][2];
+                    $yearLvl = $sectionList[$x][1];
+                    $gradeSectionID = $sectionList[$x][0];
+                ?>
+                <tr>
+                    <td class="fs-6"><?php echo $sectionName; ?></td>
+                    <td class="fs-6"><?php echo $yearLvl + 6; ?></td>
+                    <td>
+                        <a href="/gradeSection/<?php echo $sectionName . "/" . $yearLvl . "/" . $gradeSectionID;?>" class="btn btn-success">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                <?php 
+                    }
+                ?>
+            <?php endif;?>
           </tbody>
         </table>
       </div>
@@ -107,12 +108,3 @@
 </body>
 
 </html>
-
-<script>
-  $('#searchData').on('keyup', function() {
-    var value = $(this).val().toLowerCase();
-    $("#tableBody tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-</script>

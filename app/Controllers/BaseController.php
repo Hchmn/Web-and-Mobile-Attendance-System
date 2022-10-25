@@ -25,6 +25,7 @@ use \App\Models\Event;
 use App\Models\GradeSection;
 use \App\Models\Student;
 use \App\Models\Student_Attendance;
+use \App\Models\TeacherSections;
 
 
 /**
@@ -71,5 +72,6 @@ abstract class BaseController extends Controller
         $this->studentModel = new Student();
         $this->gradesectionModel = new GradeSection();
         $this->studentAttendance = new Student_Attendance();
+        $this->teacherSectionsModel = new TeacherSections();
     }
 }

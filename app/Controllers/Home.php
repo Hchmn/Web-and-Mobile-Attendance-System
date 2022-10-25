@@ -34,6 +34,7 @@ class Home extends BaseController
         $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
             ->first();
         $studentBuilder = $this->studentModel->select('*')->WHERE("GRADE",$queryBuilder['YEAR'])->WHERE('SECTION', $queryBuilder['SECTION'])->get();
+        
         $data = [
             'studentData' => $studentBuilder
         ];
@@ -84,6 +85,31 @@ class Home extends BaseController
 
     public function event()
     {
+        if(session()->has('classID')){
+            $class_id = session()->get('classID');
+            $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
+                ->first();
+                if($queryBuilder){
+                    $grade = $queryBuilder['YEAR'];
+                    $section = $queryBuilder['SECTION'];
+                    $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->get();
+                    $notification = $this->studentModel->select("*")->where("GRADE", $grade)->WHERE("SECTION", $section)->WHERE("STATUS", 1)->countAllResults(); 
+                    $data = [
+                        "notification_number" => $notification,
+                        "section" => ucfirst(strtolower($section)),
+                        "grade" => $grade + 6,
+
+                    ];
+                    session()->set($data);
+                    $queryBuilder = $this->eventModel->select('*')
+                        ->get();
+
+                    $data = [
+                        'eventData' => $queryBuilder
+                    ];
+                    return view('user/event', $data);
+                }
+        }
         $queryBuilder = $this->eventModel->select('*')
             ->get();
 
@@ -123,6 +149,7 @@ class Home extends BaseController
                 'NUM_OF_PRESENT' => 0,
                 'NUMBER_OF_ABSENCES' => 0,
                 'TOTAL_ATTENDANCE' => 200,
+                'ABSENCES' => 0,
             ];
 
             $this->studentModel->save($student_data);
@@ -204,7 +231,8 @@ class Home extends BaseController
             $status = $this->request->getVar('status');
             if($status == "1" || $status == "0"){
                 $studentDATA = [
-                    "STATUS" => $status
+                    "STATUS" => $status,
+                    "ABSENCES" => 0,
                 ];
                 $this->studentModel->update($id, $studentDATA);
                 session()->setFlashdata('success_update', true);
@@ -212,16 +240,42 @@ class Home extends BaseController
             else{
                 session()->setFlashdata('failed_update', true);
             }
-            
             return redirect()->to('notification');
-            
         }
     }
 
-    public function attendance(){
-        $GRADE_SECTION_ID = session()->get('classID');
-        $date_today = date('Y-m-d');
-        $queryBuilder = $this->studentAttendance->select("*")->WHERE("GRADE_SECTION_ID", $GRADE_SECTION_ID)->WHERE("DATE", $date_today)->get();
+    public function section_list(){
+        $queryBuilder = $this->teacherSectionsModel->select("*")->get();
+        $sectionListData = array();
+        if(count($queryBuilder->getResult()) > 0){
+            foreach($queryBuilder->getResult() as $result){
+                $gradeSectionID = $result->GRADE_SECTION_ID;
+                $querySections = $this->gradesectionModel->select("*")->WHERE("ID",$gradeSectionID)->get();
+                if(count($querySections->getResult()) > 0){
+                    $querySections = $querySections->getRow();
+                    $sectionList = array($querySections->ID, $querySections->YEAR, $querySections->SECTION);
+                    array_push($sectionListData, $sectionList);
+                }
+            }
+            $DATA = [
+                "sectionList" => $sectionListData,
+                "isSection" => TRUE,
+            ];
+            return view ("user/sections", $DATA);
+            
+        }
+        return view ('user/sections');
+    }
+
+    public function section_attendance($section = "", $grade = 0, $gradeSectionID = 0){
+        $GRADE_SECTION_ID = $gradeSectionID;
+        $grade = $grade;
+        $section = $section;
+        $teacherID = session()->get("id");
+
+        date_default_timezone_set('Asia/Manila');
+        $date_today = date("Y-m-d");
+        $queryBuilder = $this->studentAttendance->select("*")->WHERE("GRADE_SECTION_ID", $GRADE_SECTION_ID)->WHERE("DATE", $date_today)->WHERE("TEACHER_ID", $teacherID)->get();
         if(count($queryBuilder->getResult()) > 0){
             $validateAttendanceToday = false;
             $result = "";
@@ -243,65 +297,100 @@ class Home extends BaseController
                 $DATA = [
                     "attendanceData" => $attendance_data,
                     "validateAttendanceToday" => $validateAttendanceToday,
+                    "grade" => $grade,
+                    "section" => $section,
+                    "gradeSectionID" => $GRADE_SECTION_ID
                 ];
-                return view ('user/attendance', $DATA);
+                return view ('user/section_attendance', $DATA);
             }
         }
         $DATA = [
-            "validateAttendanceToday" => false
+            "validateAttendanceToday" => false,
+            "grade" => $grade,
+            "section" => $section,
+            "gradeSectionID" => $GRADE_SECTION_ID
         ];
-        return view ('user/attendance', $DATA);
+        return view ('user/section_attendance', $DATA);
     }
 
-    public function add_attendance(){
+    public function add_section_attendance(){
+
         if($this->request->getMethod() == "post"){
-            if(session()->has('classID')){
-                $class_id = session()->get('classID');
-                $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
-                    ->first();
-                if($queryBuilder){
-                    $date_today = date('Y-m-d');
-                    $queryAttendance = $this->studentAttendance->select("*")->WHERE("DATE",$date_today)->get();
-                    if(count($queryAttendance->getResult()) == 0){
-                        $grade = $queryBuilder['YEAR'];
-                        $section = $queryBuilder['SECTION'];
-                        $date_start = $this->request->getVar("date_started");
-                        $date_end = $this->request->getVar("date_end");
-                        $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->get();
-                
-                        if(count($getStudents->getResult()) > 0){
-                            foreach($getStudents->getResult() as $studentData){
-                                $STUDENT_ID = $studentData->ID;
-                                $GRADE_SECTION_ID = session()->get('classID');
-                                $ATTENDANCE_DATA = [
-                                    "TIME_IN" => NULL,
-                                    "STUDENT_ID" => $STUDENT_ID,
-                                    "GRADE_SECTION_ID" => $GRADE_SECTION_ID,
-                                    "DATE_START" => $date_start,
-                                    "DATE_END" => $date_end,
-                                    "DATE" => $date_today,
+           
+            $class_id = $this->request->getVar("gradeSectionID");
+            $teacherID = session()->get("id");
+            $yearLevel = $this->request->getVar("grade");
+            $sectionName = $this->request->getVar("section");
+            $relocate = "gradeSection" . "/" . $sectionName . "/" . $yearLevel . "/" . $class_id;
+            $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
+                ->first();
+            if($queryBuilder){
+                date_default_timezone_set('Asia/Manila');
+                $date_today = date("Y-m-d");
+                $queryAttendance = $this->studentAttendance->select("*")->WHERE("DATE",$date_today)->WHERE("TEACHER_ID", $teacherID)->WHERE("GRADE_SECTION_ID", $class_id)->get();
+                if(count($queryAttendance->getResult()) == 0){
+                    $grade = $queryBuilder['YEAR'];
+                    $section = $queryBuilder['SECTION'];
+                    $date_start = $this->request->getVar("date_started");
+                    $date_end = $this->request->getVar("date_end");
+                    $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->get();
+                    
+                    if(count($getStudents->getResult()) > 0){
+                        
+                        foreach($getStudents->getResult() as $studentData){
+                            $STUDENT_ID = $studentData->ID;
+                            $GRADE_SECTION_ID = $class_id;
+                            $ATTENDANCE_DATA = [
+                                "TIME_IN" => NULL,
+                                "STUDENT_ID" => $STUDENT_ID,
+                                "GRADE_SECTION_ID" => $GRADE_SECTION_ID,
+                                "DATE_START" => $date_start,
+                                "DATE_END" => $date_end,
+                                "DATE" => $date_today,
+                                "TEACHER_ID" => $teacherID,
+                               
+                            ];
+                            $NUM_ABSENCES = $studentData->NUMBER_OF_ABSENCES + 1;
+                            $CURRENT_ABSENCES = $studentData->ABSENCES + 1;
+                            $data = ($CURRENT_ABSENCES >= 3) ? ["NUMBER_OF_ABSENCES" => $NUM_ABSENCES,"STATUS" => 1 , "ABSENCES" => $CURRENT_ABSENCES] : ["NUMBER_OF_ABSENCES" => $NUM_ABSENCES, "ABSENCES" => $CURRENT_ABSENCES];
+                            
+                            $this->studentModel->update($STUDENT_ID, $data);
+                            $this->studentAttendance->save($ATTENDANCE_DATA);
+                        }
+                        $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
+                            ->first();
+                            if($queryBuilder){
+                                $grade = $queryBuilder['YEAR'];
+                                $section = $queryBuilder['SECTION'];
+                                $notification = $this->studentModel->select("*")->where("GRADE", $grade)->WHERE("SECTION", $section)->WHERE("STATUS", 1)->countAllResults(); 
+                                $data = [
+                                    "notification_number" => $notification,
+                                    "section" => ucfirst(strtolower($section)),
+                                    "grade" => $grade + 6,
+
                                 ];
-                                $NUM_ABSENCES = $studentData->NUMBER_OF_ABSENCES + 1;
-                                $data = ($NUM_ABSENCES >= 3) ? ["NUMBER_OF_ABSENCES" => $NUM_ABSENCES,"STATUS" => 1 ] : ["NUMBER_OF_ABSENCES" => $NUM_ABSENCES];
-                                
-                                $this->studentModel->update($STUDENT_ID, $data);
-                                $this->studentAttendance->save($ATTENDANCE_DATA);
-                            }
-                            session()->setFlashData("added_attendance", "Successfully Added Attendance");
-                            return redirect()->to("attendance");
-                        }
-                        else{
-                            session()->setFlashData("enroll_students", "Zero Students in this Section");
-                            return redirect()->to("attendance");
-                        }
+                                session()->set($data);
+                            } 
+                        
+                        session()->setFlashData("added_attendance", "Successfully Added Attendance");
+                        return redirect()->to($relocate);
                     }
                     else{
-                        session()->setFlashData("failed_attendance", "Failed To Add Attendance");
-                        return redirect()->to("attendance");
+                        session()->setFlashData("enroll_students", "Zero Students in this Section");
+                        return redirect()->to($relocate);
                     }
-                }  
-            }
+                }
+                else{
+                    session()->setFlashData("failed_attendance", "Failed To Add Attendance");
+                    return redirect()->to($relocate);
+                }
+            }  
+           
         }
+
+
     }
+
+
 
 }

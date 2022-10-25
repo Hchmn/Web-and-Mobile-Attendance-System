@@ -32,25 +32,25 @@
 
           <ul class="list-unstyled components mb-5">
             <li>
-              <a href="event">Event/ Upcoming Event</a>
+              <a href="/event">Event/ Upcoming Event</a>
             </li>
             <li>
-              <a href="user_homepage">Homepage</a>
+              <a href="/user_homepage">Add Student</a>
             </li>
             <li>
-              <a href="studentrecords">Student Records</a>
+              <a href="/studentrecords">Student Records</a>
             </li>
             <li>
-              <a href="studentattendance">Year Level Records</a>
+              <a href="/studentattendance">Year Level Records</a>
             </li>
             <li>
-              <a href="teachersettings">Settings</a>
+              <a href="/teachersettings">Settings</a>
             </li>
             <li>
-              <a href="attendance" class="text-warning">Attendance</a>
+              <a href="/section_list" class="text-warning">Attendance</a>
             </li>
             <li>
-              <a href="notification" class="notification">
+              <a href="/notification" class="notification">
                   <span>Notification</span>
                   <?php if(session()->has("notification_number")):?>
                     <span class="badge"><?php echo session()->get("notification_number")?></span>
@@ -72,8 +72,8 @@
           <h1 class="fw-bold text-info">Classroom Attendance<?php echo ": ".Date("Y-m-d")?></h1>
           <div class="">
             <div>
-              <p class="fs-3 fw-bold mb-0 text-info"><?php echo "Grade" .": ".session()->get("grade")?></p>
-              <p class="fs-3 fw-bold mb-2 text-info"><?php echo "Section" .": ".session()->get("section")?></p>
+              <p class="fs-3 fw-bold mb-0 text-info"><?php echo "Grade" .": ".$grade + 6?></p>
+              <p class="fs-3 fw-bold mb-2 text-info"><?php echo "Section" .": ".$section?></p>
             </div>
               <?php
                 if($validateAttendanceToday): ?>
@@ -110,13 +110,16 @@
           <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
-                    <form method="post" action="add_attendance">
+                    <form method="post" action="/add_section_attendance">
                       <div class="modal-header" style="justify-content: center; font-weight:bolder;">
                         <h3 class="modal-title">START ATTENDANCE</h3>
                       </div>
                       <div class="modal-body">
                         <div class="col-md-12">
                             <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 text-danger">Must fill the required fields</label>
+                            <input type="hidden" value="<?php echo $gradeSectionID;?>" name="gradeSectionID">
+                            <input type="hidden" value="<?php echo $grade;?>" name="grade">
+                            <input type="hidden" value="<?php echo $section;?>" name="section">
                         </div>
                         <div class="col-md-8">
                           <div class="form-group " style="width:140%; height:120%;">

@@ -32,7 +32,7 @@ class Login extends BaseController
           $this->setUserSession($getDetails);
           if (session()->has('id')) {
             if ($getDetails['USERTYPE'] == 2) {
-              return redirect()->to('/user_homepage');
+              return redirect()->to('/event');
             } elseif ($getDetails['USERTYPE'] == 1) {
               return redirect()->to('/admin_homepage');
             } else {
