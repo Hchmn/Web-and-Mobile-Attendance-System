@@ -33,7 +33,7 @@
             <a href="admin_add_user">Add User</a>
           </li>
           <li>
-            <a href="#">Print Records</a>
+            <a href="admin_print_records">Print Records</a>
           </li>
           <li>
             <a href="admin_settings">Administrator Settings</a>

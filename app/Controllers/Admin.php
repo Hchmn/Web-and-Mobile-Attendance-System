@@ -13,7 +13,13 @@ class Admin extends BaseController
 
   public function add_user()
   {
-    return view('admin/adduser');
+    $queryBuilder = $this->gradesectionModel->select("*")->get();
+    
+    $data = [
+      'studentSection' => $queryBuilder
+    ];
+    
+    return view('admin/adduser', $data);
   }
 
   public function admin_settings()
@@ -40,7 +46,7 @@ class Admin extends BaseController
       $userType = $this->request->getVar('usertype');
       $created_at = date("Y-m-d H:i:s");
       $hashPassword = password_hash($password, PASSWORD_DEFAULT);
-
+      $classId = ($userType == "2") ? $this->request->getVar('classId') : NULL;
       $accountData = [
         'USERNAME' => $username,
         'PASSWORD' => $hashPassword,
@@ -48,7 +54,8 @@ class Admin extends BaseController
         'LNAME' => $lName,
         'AGE' => $age,
         'USERTYPE' => $userType,
-        'DATE' => $created_at
+        'DATE' => $created_at,
+        'CLASS_ID' => NULL,
       ];
 
       $this->accountModel->save($accountData);
@@ -106,4 +113,17 @@ class Admin extends BaseController
     session()->setFlashdata('deleted', 'Account Deleted Successfully');
     return redirect()->to('admin_settings');
   }
+
+  public function print_records()
+  {
+    $queryBuilder = $this->studentModel->select("*")->get();
+
+    $data = [
+      'studentData' => $queryBuilder
+    ];
+
+    return view('admin/studentrecords', $data);
+  }
+
+
 }

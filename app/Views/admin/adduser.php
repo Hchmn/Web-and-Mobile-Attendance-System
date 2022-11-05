@@ -33,7 +33,7 @@
             <a href="admin_add_user">Add User</a>
           </li>
           <li>
-            <a href="#">Print Records</a>
+            <a href="admin_print_records">Print Records</a>
           </li>
           <li>
             <a href="admin_settings">Administrator Settings</a>
@@ -85,11 +85,33 @@
 
             <div class="mb-2 w-100">
               <label for="exampleInputEmail1" class="form-label fs-6">USERTYPE</label>
-              <select class="form-select w-50" name="usertype" id="" onchange="" required>
-                <option value="2" id="2">Teacher</option>
+              <select class="form-select w-50" name="usertype" id="userType" onclick="checkType()" required>
                 <option value="1" id="1">Admin</option>
+                <option value="2" id="2">Teacher</option>
+                
               </select>
             </div>
+
+            <div class="mb-2 w-100" style="display:none" id="studentClass">
+              <label for="exampleInputEmail1" class="form-label fs-6">Grade & Section</label>
+              <select class="form-select w-50" name="classId"  onchange="" required>
+              
+                <?php 
+                foreach($studentSection->getResult() as $section)
+                  { 
+                ?>
+                  <option value="<?php echo $section->ID;?>  "> 
+                  <?php 
+                    echo $section->YEAR+6 ." - ". $section->SECTION;
+                  ?> 
+                
+                  </option>
+                <?php 
+                  }
+                ?>
+              </select>
+            </div>
+
 
             <button type="submit" class="btn btn-success mt-3 float-center">Submit</button>
 
@@ -101,3 +123,20 @@
 </body>
 
 </html>
+
+<script>
+  function checkType(){
+    var userType = document.getElementById("userType");
+    console.log(userType.value)
+    var classType = document.getElementById("studentClass");
+    if(userType.value == 2){
+      
+      classType.style.display = "block";
+      console.log("HERE");
+    }
+    else{
+      classType.style.display = "none";
+    }
+    
+  }
+</script>

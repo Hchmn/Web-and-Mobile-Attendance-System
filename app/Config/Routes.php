@@ -75,6 +75,7 @@ $routes->post('create_user', 'Admin::create_user');
 $routes->post('create_event', 'Admin::create_event');
 $routes->post('update_account', 'Admin::update_account');
 $routes->get('delete/(:num)', 'Admin::delete_account/$1');
+$routes->get('admin_print_records', 'Admin::print_records');
 
 
 /*
