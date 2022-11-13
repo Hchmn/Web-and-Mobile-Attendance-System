@@ -245,6 +245,13 @@ class Home extends BaseController
     }
 
     public function section_list(){
+
+        $queryBuilderSection = $this->gradesectionModel->select("*")->get();
+    
+        $data = [
+        'studentSection' => $queryBuilderSection
+        ];
+        
         $queryBuilder = $this->teacherSectionsModel->select("*")->get();
         $sectionListData = array();
         if(count($queryBuilder->getResult()) > 0){
@@ -260,11 +267,13 @@ class Home extends BaseController
             $DATA = [
                 "sectionList" => $sectionListData,
                 "isSection" => TRUE,
+                "studentSection" => $queryBuilderSection
             ];
+
             return view ("user/sections", $DATA);
             
         }
-        return view ('user/sections');
+        return view ('user/sections', $data);
     }
 
     public function section_attendance($section = "", $grade = 0, $gradeSectionID = 0){
@@ -388,6 +397,30 @@ class Home extends BaseController
            
         }
 
+
+    }
+
+    public function add_section(){
+        if ($this->request->getMethod() == 'post') {
+            $section = $this->request->getVar("section");
+            $teacherId = session()->get("id");
+            $data = [
+                "GRADE_SECTION_ID" => $section,
+                "TEACHER_ID" => session()->get("id")
+            ];
+            $queryBuilder = $this->teacherSectionsModel->WHERE("TEACHER_ID", $teacherId)->WHERE("GRADE_SECTION_ID", $section)->first();
+        
+            if($queryBuilder){
+                session()->setFlashdata("add_section_fail", "Failed to Add Section");
+                return redirect()->to("section_list");
+            }
+
+            $this->teacherSectionsModel->save($data);
+            session()->setFlashdata("add_section_success", "Successfully Added Section");
+            
+            return redirect()->to("section_list");
+            
+        }
 
     }
 

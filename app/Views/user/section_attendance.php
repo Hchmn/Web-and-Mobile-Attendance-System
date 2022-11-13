@@ -107,6 +107,7 @@
               <?php endif; ?>
           </div>
           <div class="table-responsive  mt-2">
+          
           <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">

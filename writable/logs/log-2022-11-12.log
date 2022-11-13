@@ -1,0 +1,14 @@
+CRITICAL - 2022-11-12 22:01:17 --> Call to undefined method App\Controllers\Home::teacherSectionsModel()
+in APPPATH\Controllers\Home.php on line 411.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->add_section()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-12 22:03:36 --> Call to undefined method App\Controllers\Home::teacherSectionsModel()
+in APPPATH\Controllers\Home.php on line 411.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->add_section()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

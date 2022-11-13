@@ -54,6 +54,11 @@
           User successfully added!
         </div>
       <?php endif; ?>
+      <?php if (session()->has('registered_failed')) : ?>
+        <div class="alert alert-danger w-25">
+          Failed to add user!
+        </div>
+      <?php endif; ?>
       <form action="/create_user" method="post">
         <div class="row row-cols-2">
           <!-- FIRST COLUMN -->

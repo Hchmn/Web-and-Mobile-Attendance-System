@@ -46,20 +46,51 @@ class Admin extends BaseController
       $userType = $this->request->getVar('usertype');
       $created_at = date("Y-m-d H:i:s");
       $hashPassword = password_hash($password, PASSWORD_DEFAULT);
-      $classId = ($userType == "2") ? $this->request->getVar('classId') : NULL;
-      $accountData = [
-        'USERNAME' => $username,
-        'PASSWORD' => $hashPassword,
-        'FNAME' => $fName,
-        'LNAME' => $lName,
-        'AGE' => $age,
-        'USERTYPE' => $userType,
-        'DATE' => $created_at,
-        'CLASS_ID' => NULL,
-      ];
 
-      $this->accountModel->save($accountData);
-      session()->setFlashdata('registered', "User added successfully");
+      $classId = ($userType == "2") ? $this->request->getVar('classId') : NULL;
+      if($userType == "2"){
+        $classId = $this->request->getVar('classId');
+        $accountData = [
+          'USERNAME' => $username,
+          'PASSWORD' => $hashPassword,
+          'FNAME' => $fName,
+          'LNAME' => $lName,
+          'AGE' => $age,
+          'USERTYPE' => $userType,
+          'DATE' => $created_at,
+          'CLASS_ID' => $classId,
+        ];
+        
+        $queryBuilder = $this->accountModel->WHERE("CLASS_ID", $classId)->first();
+        
+        if($queryBuilder){
+          session()->setFlashdata('registered_failed', "Failed to add user");
+        }
+
+        else{
+          $this->accountModel->save($accountData);
+          session()->setFlashdata('registered', "User added successfully");
+        }
+        
+      }
+
+      else{
+
+        $accountData = [
+          'USERNAME' => $username,
+          'PASSWORD' => $hashPassword,
+          'FNAME' => $fName,
+          'LNAME' => $lName,
+          'AGE' => $age,
+          'USERTYPE' => $userType,
+          'DATE' => $created_at,
+          'CLASS_ID' => NULL,
+        ];
+  
+        $this->accountModel->save($accountData);
+        session()->setFlashdata('registered', "User added successfully");
+      }
+      
       return redirect()->to('admin_add_user');
     }
   }
