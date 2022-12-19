@@ -58,6 +58,8 @@ $routes->get('section_list', 'Home::section_list');
 $routes->get('gradeSection/(:any)', 'Home::section_attendance/$1');
 $routes->post('add_section_attendance', 'Home::add_section_attendance');
 $routes->post('add_section', 'Home::add_section');
+$routes->get('viewstudentdata/(:any)', 'Home::view_student_data/$1');
+$routes->post("update_event_schedule", 'Home::update_event_schedule');
 
 
 
@@ -77,6 +79,8 @@ $routes->post('create_event', 'Admin::create_event');
 $routes->post('update_account', 'Admin::update_account');
 $routes->get('delete/(:num)', 'Admin::delete_account/$1');
 $routes->get('admin_print_records', 'Admin::print_records');
+$routes->get("admin_student", 'Admin::student');
+$routes->post("admin_add_student", 'Admin::add_student');
 
 
 /*

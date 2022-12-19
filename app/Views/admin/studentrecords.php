@@ -36,10 +36,13 @@
             <a href="admin_add_user">Add User</a>
           </li>
           <li>
-            <a href="admin_student_records">Print Records</a>
+            <a href="admin_print_records">Print Records</a>
           </li>
           <li>
             <a href="admin_settings">Administrator Settings</a>
+          </li>
+          <li>
+            <a href="admin_student">Add Student</a>
           </li>
           <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>

@@ -135,7 +135,7 @@ class Home extends BaseController
 
             $qrCode = $fName . " " . $lName . " " . $mName . " " .$LRN . " " . $gender . " " . $grade . " " . $section;
             $hashQRCode  = password_hash($qrCode, PASSWORD_DEFAULT);
-            echo $fName;
+            // echo $fName;
             $student_data = [
                 'FIRSTNAME' => $fName,
                 'LASTNAME' => $lName,
@@ -251,8 +251,9 @@ class Home extends BaseController
         $data = [
         'studentSection' => $queryBuilderSection
         ];
-        
-        $queryBuilder = $this->teacherSectionsModel->select("*")->get();
+        $teacherID = session()->get("id");
+
+        $queryBuilder = $this->teacherSectionsModel->select("*")->where("TEACHER_ID", $teacherID)->get();
         $sectionListData = array();
         if(count($queryBuilder->getResult()) > 0){
             foreach($queryBuilder->getResult() as $result){
@@ -422,6 +423,58 @@ class Home extends BaseController
             
         }
 
+    }
+
+    
+    public function view_student_data($studentId = 0){
+        $id = $studentId;
+        $queryBuilder = $this->studentAttendance->select("*")->WHERE("STUDENT_ID", $id)->get();
+        
+        // if(count($queryBuilder)->getResult() > 0){
+
+        // }
+
+        $studentData = array();
+        
+        $queryStudent = $this->studentModel->select("*")->WHERE("ID", $id)->first();
+        $studentName = $queryStudent["FIRSTNAME"]." ".$queryStudent["LASTNAME"]; 
+
+        foreach($queryBuilder->getResult() as $data){
+            
+            //get teacher name
+            $queryTeacher = $this->accountModel->select("*")->WHERE("ID", $data->TEACHER_ID)->first();
+            $teacherName = $queryTeacher["FNAME"]." ".$queryTeacher["LNAME"];
+
+            $createArray = array($studentName, $teacherName, $data->TIME_IN, $data->DATE_START, $data->DATE_END);
+
+            array_push($studentData, $createArray);
+
+        }
+        $data = [
+            "student_data" => $studentData,
+        ];
+        return view ("user/sections/viewstudentdata",$data);
+    }
+
+
+    public function update_event_schedule(){
+        if ($this->request->getMethod() == 'post') {
+            $eventName = $this->request->getVar("eventName");
+            $eventVenue = $this->request->getVar("eventVenue");
+            $eventDate = $this->request->getVar("eventDate");
+            $eventId = $this->request->getVar("eventId"); 
+
+            $data = [
+                "NAME" => $eventName,
+                "VENUE" => $eventVenue,
+                "SCHEDULE" => $eventDate,
+            ];
+
+            $this->eventModel->update($eventId, $data);
+            
+        }
+        return redirect()->to("event");
+        
     }
 
 

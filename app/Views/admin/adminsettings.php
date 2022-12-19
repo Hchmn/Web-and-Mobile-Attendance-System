@@ -46,6 +46,9 @@
             <a href="admin_settings">Administrator Settings</a>
           </li>
           <li>
+            <a href="admin_student">Add Student</a>
+          </li>
+          <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
           </li>
         </ul>

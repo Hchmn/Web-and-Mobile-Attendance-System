@@ -1,0 +1,235 @@
+CRITICAL - 2022-11-20 00:39:58 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 77
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(77): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 00:39:59 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 77
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(77): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 00:49:07 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\PdfController.php on line 36.
+ 1 APPPATH\Controllers\PdfController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\PdfController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('808604448065')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 00:51:19 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\PdfController.php on line 36.
+ 1 APPPATH\Controllers\PdfController.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\PdfController.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('808604448065')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 00:51:40 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 77
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(77): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:00:58 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 77
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(77): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:01:25 --> Undefined variable $student_id
+in APPPATH\Controllers\Home.php on line 430.
+ 1 APPPATH\Controllers\Home.php(430): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'APPPATH\\Controllers\\Home.php', 430)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:01:56 --> Undefined variable $student_id
+in APPPATH\Controllers\Home.php on line 430.
+ 1 APPPATH\Controllers\Home.php(430): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'APPPATH\\Controllers\\Home.php', 430)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:02:22 --> Undefined variable $student_id
+in APPPATH\Controllers\Home.php on line 430.
+ 1 APPPATH\Controllers\Home.php(430): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_id', 'APPPATH\\Controllers\\Home.php', 430)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:02:37 --> Undefined variable $year
+in APPPATH\Views\user\sections\viewstudentdata.php on line 53.
+ 1 APPPATH\Views\user\sections\viewstudentdata.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year', 'APPPATH\\Views\\user\\sections\\viewstudentdata.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\viewstudentdata.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewstudentdata', [], true)
+ 5 APPPATH\Controllers\Home.php(440): view('user/sections/viewstudentdata', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:25:08 --> Undefined array key "FIRSTAME"
+in APPPATH\Controllers\Home.php on line 440.
+ 1 APPPATH\Controllers\Home.php(440): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "FIRSTAME"', 'APPPATH\\Controllers\\Home.php', 440)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:25:20 --> Undefined variable $year
+in APPPATH\Views\user\sections\viewstudentdata.php on line 53.
+ 1 APPPATH\Views\user\sections\viewstudentdata.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year', 'APPPATH\\Views\\user\\sections\\viewstudentdata.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\viewstudentdata.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewstudentdata', [], true)
+ 5 APPPATH\Controllers\Home.php(456): view('user/sections/viewstudentdata', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:25:34 --> sizeof(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\user\sections\viewstudentdata.php on line 70.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewstudentdata', [], true)
+ 4 APPPATH\Controllers\Home.php(456): view('user/sections/viewstudentdata', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:26:10 --> Undefined variable $attendance_data
+in APPPATH\Views\user\sections\viewstudentdata.php on line 70.
+ 1 APPPATH\Views\user\sections\viewstudentdata.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'APPPATH\\Views\\user\\sections\\viewstudentdata.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\viewstudentdata.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewstudentdata', [], true)
+ 5 APPPATH\Controllers\Home.php(456): view('user/sections/viewstudentdata', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:26:46 --> array_push(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Controllers\Home.php on line 450.
+ 1 APPPATH\Controllers\Home.php(450): array_push(null, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:28:13 --> Undefined variable $attendance_data
+in APPPATH\Views\user\sections\viewstudentdata.php on line 70.
+ 1 APPPATH\Views\user\sections\viewstudentdata.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $attendance_data', 'APPPATH\\Views\\user\\sections\\viewstudentdata.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\viewstudentdata.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewstudentdata', [], true)
+ 5 APPPATH\Controllers\Home.php(456): view('user/sections/viewstudentdata', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:28:31 --> sizeof(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\user\sections\viewstudentdata.php on line 72.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewstudentdata', [], true)
+ 4 APPPATH\Controllers\Home.php(456): view('user/sections/viewstudentdata', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 01:29:12 --> Undefined variable $student_data_data
+in APPPATH\Views\user\sections\viewstudentdata.php on line 75.
+ 1 APPPATH\Views\user\sections\viewstudentdata.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student_data_data', 'APPPATH\\Views\\user\\sections\\viewstudentdata.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections\\viewstudentdata.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections/viewstudentdata', [], true)
+ 5 APPPATH\Controllers\Home.php(456): view('user/sections/viewstudentdata', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-20 09:27:47 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-11-20 09:27:47 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `account`
+WHERE `USERNAME` = :USERNAME:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Login->verifyData()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:32:33 --> Undefined variable $student
+in APPPATH\Views\user\event.php on line 104.
+ 1 APPPATH\Views\user\event.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'APPPATH\\Views\\user\\event.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\event.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/event', [], true)
+ 5 APPPATH\Controllers\Home.php(110): view('user/event', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->event()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:32:52 --> Undefined variable $student
+in APPPATH\Views\user\event.php on line 119.
+ 1 APPPATH\Views\user\event.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'APPPATH\\Views\\user\\event.php', 119)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\event.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/event', [], true)
+ 5 APPPATH\Controllers\Home.php(110): view('user/event', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->event()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:32:56 --> Undefined variable $student
+in APPPATH\Views\user\event.php on line 119.
+ 1 APPPATH\Views\user\event.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'APPPATH\\Views\\user\\event.php', 119)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\event.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/event', [], true)
+ 5 APPPATH\Controllers\Home.php(110): view('user/event', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->event()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-20 09:36:21 --> Undefined variable $student
+in APPPATH\Views\user\event.php on line 120.
+ 1 APPPATH\Views\user\event.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'APPPATH\\Views\\user\\event.php', 120)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\event.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/event', [], true)
+ 5 APPPATH\Controllers\Home.php(110): view('user/event', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->event()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

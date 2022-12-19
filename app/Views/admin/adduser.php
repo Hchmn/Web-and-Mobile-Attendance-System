@@ -39,6 +39,9 @@
             <a href="admin_settings">Administrator Settings</a>
           </li>
           <li>
+            <a href="admin_student">Add Student</a>
+          </li>
+          <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
           </li>
         </ul>
@@ -117,7 +120,6 @@
               </select>
             </div>
 
-
             <button type="submit" class="btn btn-success mt-3 float-center">Submit</button>
 
           </div>
@@ -142,6 +144,5 @@
     else{
       classType.style.display = "none";
     }
-    
   }
 </script>

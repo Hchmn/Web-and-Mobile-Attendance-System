@@ -94,7 +94,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Add Section</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -122,7 +122,7 @@
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-success">Save changes</button>
               </div>
               </form>
@@ -140,7 +140,7 @@
               <th scope="col" class="fs-6">Section Name</th>
               <th scope="col" class="fs-6">Year Level</th>
               <th scope="col" class="fs-6">Action</th>
-            </tr>
+            </tr> 
           </thead>
           <tbody>
             <?php if($isSection):?>

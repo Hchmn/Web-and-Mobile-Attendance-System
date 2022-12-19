@@ -33,6 +33,66 @@ class Admin extends BaseController
     return view('admin/adminsettings', $data);
   }
 
+  public function student(){
+    return view ('admin/student');
+  }
+
+  public function add_student(){
+    helper(['form']);
+
+    if($this->request->getMethod() == 'post'){
+      $file = $this->request->getFile('file');
+
+      /*
+      *Move file to the public/csvfiles
+      */
+      $newFile = $file->getRandomName();
+      $file->move('../public/csvfile', $newFile);
+      $file = fopen("../public/csvfile/".$newFile, "r");
+      $grade = $this->request->getVar("grade");
+      $section = $this->request->getVar("section");
+
+
+      $rowCount = 0;
+      while(($filedata = fgetcsv($file, 1000, ",")) !== FALSE){
+
+        if($rowCount > 0){
+          $firstName = $filedata[0];
+          $lastName = $filedata[1];
+          $middleName = $filedata[2];
+          $age = $filedata[3];
+          $gender = $filedata[4];
+          $lrn = $filedata[5];
+          $qrCode = $firstName . " " . $lastName . " " . $middleName . " " .$lrn . " " . $gender . " " . $grade . " " . $section;
+          $hashQRCode  = password_hash($qrCode, PASSWORD_DEFAULT);
+
+          $student_data = [
+            'FIRSTNAME' => $firstName,
+            'LASTNAME' => $lastName,
+            'MIDDLENAME' => $middleName,
+            'AGE' => $age,
+            'GENDER' => $gender,
+            'QR' => $hashQRCode,
+            'GRADE' => $grade,
+            'LRN' => $lrn,
+            'SECTION' => $section,
+            'NUM_OF_PRESENT' => 0,
+            'NUMBER_OF_ABSENCES' => 0,
+            'TOTAL_ATTENDANCE' => 0,
+            'ABSENCES' => 0,
+          ];
+          $this->studentModel->save($student_data);
+        }
+        
+        $rowCount+=1;
+      }
+      session()->setFlashdata('message', ($rowCount-1). " Student(s) added successfully");
+      session()->setFlashdata('alert-class', 'alert-success');
+      return redirect()->to('admin_student');
+    }
+
+  }
+ 
   public function create_user()
   {
     helper(['form']);
@@ -68,8 +128,18 @@ class Admin extends BaseController
         }
 
         else{
+          
           $this->accountModel->save($accountData);
           session()->setFlashdata('registered', "User added successfully");
+          
+          
+          $user_id = $this->accountModel->getInsertId();
+          
+          $data = [
+            "TEACHER_ID" => $user_id,
+            "GRADE_SECTION_ID" => $classId
+          ];
+          $this->teacherSectionsModel->save($data);
         }
         
       }
@@ -89,6 +159,8 @@ class Admin extends BaseController
   
         $this->accountModel->save($accountData);
         session()->setFlashdata('registered', "User added successfully");
+
+
       }
       
       return redirect()->to('admin_add_user');
