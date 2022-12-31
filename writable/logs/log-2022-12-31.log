@@ -476,3 +476,120 @@ in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:31:39 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_yearsAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:31:50 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_yearsAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:31:52 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_yearsAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:31:53 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_yearsAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:31:54 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_yearsAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:32:28 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_grade_levelAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:32:32 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_grade_levelAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-31 03:32:48 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_grade_levelAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-31 03:32:49 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_grade_levelAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-31 03:32:55 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_grade_levelAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:33:02 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_grade_levelAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:33:07 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Config\Routes.php on line 87 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(87): CodeIgniter\Router\RouteCollection->get('admin_grade_levelAdmin::admin_grade_level')
+ 2 SYSTEMPATH\CodeIgniter.php(760): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:39:18 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 440.
+ 1 APPPATH\Controllers\Home.php(440): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 440)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->view_student_data('admin_homepage')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:42:46 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_records()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:42:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_records()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

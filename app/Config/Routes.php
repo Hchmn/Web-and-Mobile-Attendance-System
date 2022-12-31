@@ -84,6 +84,7 @@ $routes->post("admin_add_student", 'Admin::add_student');
 $routes->get('admin_teachers', 'Admin::admin_teachers' );
 $routes->get('admin_teacher_subjects/(:num)', 'Admin::admin_teacher_subjects/$1');
 $routes->post('admin_assign_subject/(:num)', 'Admin::admin_assign_new_subject/$1');
+$routes->get('admin_grade_level', 'Admin::admin_grade_level');
 
 
 /*

@@ -35,7 +35,7 @@
             <a href="event">Event/ Upcoming Event</a>
           </li>
           <li>
-            <a href="user_homepage">Add Student</a>
+            <!-- <a href="user_homepage">Add Student</a> -->
           </li>
           <li>
             <a href="studentrecords">Student Records</a>

@@ -297,5 +297,9 @@ class Admin extends BaseController
 
   }
 
+  public function admin_grade_level(){
+    return view ('admin/students');
+  }
+
 
 }

@@ -19,26 +19,37 @@
 
   <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar">
-      <div class="p-4 pt-5">
+    <div class="p-4 pt-5">
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
           </a>
-          <p class="mb-3 mt-3 text-center">Nasrollah L. Gandamato</p>
+          <p class="mb-3 mt-3 text-center">ADMIN</p>
         </div>
-        
 
         <ul class="list-unstyled components mb-5">
           <li>
-            <a href="/user_homepage">Add Student</a>
+            <a href="/admin_homepage">Homepage</a>
           </li>
           <li>
-            <a href="/studentrecords">Student Records</a>
+            <a href="/admin_add_user">Add User</a>
           </li>
           <li>
-            <a href="/studentattendance">Load Students Attendance</a>
+            <a href="/admin_print_records">Print Records</a>
           </li>
           <li>
-            <a href="/event">Event/ Upcoming Event</a>
+            <a href="/admin_settings">Administrator Settings</a>
+          </li>
+          <li>
+            <a href="/admin_student">Add Student</a>
+          </li>
+          <li>
+            <a href="/admin_teachers">Teachers</a>
+          </li>
+          <li>
+            <a href="/admin_grade_level">Year Levels</a>
+          </li>
+          <li>
+            <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
           </li>
         </ul>
       </div>

@@ -33,7 +33,7 @@
             <a href="event">Event/ Upcoming Event</a>
           </li>
           <li>
-            <a href="user_homepage" class="text-warning">Add Student</a>
+            <!-- <a href="user_homepage" class="text-warning">Add Student</a> -->
           </li>
           <li>
             <a href="studentrecords">Student Records</a>

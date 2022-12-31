@@ -52,6 +52,9 @@
             <a href="/admin_teachers">Teachers</a>
           </li>
           <li>
+            <a href="admin_grade_level">Year Levels</a>
+          </li>
+          <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
           </li>
         </ul>
