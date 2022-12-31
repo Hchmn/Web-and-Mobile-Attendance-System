@@ -9,5 +9,5 @@ class TeacherSections extends Model
   protected $table = 'teacher_sections';
 
   protected $primaryKey = 'ID';
-  protected $allowedFields = ['TEACHER_ID', 'GRADE_SECTION_ID'];
+  protected $allowedFields = ['TEACHER_ID', 'GRADE_SECTION_ID', 'ROLE', 'SUBJECT'];
 }

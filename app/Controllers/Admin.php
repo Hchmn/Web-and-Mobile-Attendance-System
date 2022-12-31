@@ -137,7 +137,9 @@ class Admin extends BaseController
           
           $data = [
             "TEACHER_ID" => $user_id,
-            "GRADE_SECTION_ID" => $classId
+            "GRADE_SECTION_ID" => $classId,
+            "ROLE" => 0,
+            "SUBJECT" => NULL,
           ];
           $this->teacherSectionsModel->save($data);
         }
@@ -226,6 +228,73 @@ class Admin extends BaseController
     ];
 
     return view('admin/studentrecords', $data);
+  }
+
+  public function admin_teachers(){
+    $queryBuilder = $this->accountModel->query("SELECT * FROM account a 
+                      INNER JOIN gradesection g on g.ID = a.CLASS_ID 
+                      where a.USERTYPE = 2");
+
+    $data = [
+      'teacherData' => $queryBuilder
+    ];
+    return view ('admin/teacher', $data);
+  }
+
+  public function admin_teacher_subjects($id = 0){
+    $queryBuilder = $this->teacherSectionsModel->query("SELECT * FROM teacher_sections ts 
+                      INNER JOIN gradesection g on g.ID = ts.GRADE_SECTION_ID 
+                      where ts.TEACHER_ID = $id");
+
+    $querySections = $this->gradesectionModel->select("*")->get();
+
+    $data = [
+      'teacherData' => $queryBuilder,
+      'gradeSections' => $querySections,
+      'teacherID' => $id
+    ];
+    return view ('admin/teacher_subject', $data);
+
+  }
+
+  public function admin_assign_new_subject($id = 0){
+    helper(['form']);
+
+    if ($this->request->getMethod() == 'post') {
+      $teacherID = $id;
+      $role = $this->request->getVar("role");
+      $classId = $this->request->getVar("classId");
+      $subject = $this->request->getVar("subject");
+
+      $teacherSectionData = [
+        "TEACHER_ID" => $teacherID,
+        "GRADE_SECTION_ID" => $classId,
+        "ROLE" => $role,
+        "SUBJECT" => $subject
+      ];
+
+      $validate = $this->teacherSectionsModel->query("SELECT COUNT(*) as result from teacher_sections ts 
+                          where ts.TEACHER_ID = '$id' && ts.GRADE_SECTION_ID = '$classId'
+                          && ts.`ROLE` = '$role' && lower(ts.SUBJECT) = '$subject'");
+
+    
+      if($validate->getResult()[0]->result > 0){
+        session()->setFlashData('message', 'This data already exist');
+        session()->setFlashData('message_color', 'alert-danger w-50');
+      }
+
+      else{
+        session()->setFlashData('message', 'Successfully Added Teacher Subject and Section');
+        session()->setFlashData('message_color', 'alert-success w-50');
+        $this->teacherSectionsModel->save($teacherSectionData);
+
+      }
+      
+      $returnValue = 'admin_teacher_subjects/'.$id;
+      return redirect()->to($returnValue);
+      
+    }
+
   }
 
 

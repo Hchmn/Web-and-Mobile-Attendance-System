@@ -24,7 +24,7 @@
 <body class=" ">
 
   <div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
+  <nav id="sidebar">
       <div class="p-4 pt-5">
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
@@ -47,6 +47,9 @@
           </li>
           <li>
             <a href="admin_student">Add Student</a>
+          </li>
+          <li>
+            <a href="admin_teachers">Teachers</a>
           </li>
           <li>
             <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
@@ -75,7 +78,6 @@
               <th scope="col" class="fs-6">Age</th>
               <th scope="col" class="fs-6">Username</th>
               <th scope="col" class="fs-6">Password</th>
-              <th scope="col" class="fs-6">Action</th>
             </tr>
           </thead>
 
@@ -85,7 +87,6 @@
               $lName = $account->LNAME;
               $userName = $account->USERNAME;
               $age = $account->AGE;
-
             ?>
               <tr>
                 <td><?php echo $fName; ?></td>

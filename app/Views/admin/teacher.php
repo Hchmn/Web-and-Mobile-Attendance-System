@@ -2,14 +2,19 @@
 <html lang="en">
 
 <head>
-  <title>HOMEPAGE | STUDENT RECORDS</title>
+  <title>HOMEPAGE | TEACHER DATA</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
@@ -64,58 +69,42 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col" class="fs-6">LRN</th>
               <th scope="col" class="fs-6">First Name</th>
               <th scope="col" class="fs-6">Last Name</th>
-              <th scope="col" class="fs-6">Grade</th>
-              <th scope="col" class="fs-6">Section</th>
-              <th scope="col" class="qr-code fs-6">QR Code</th>
+              <th scope="col" class="fs-6">AGE</th>
+              <th scope="col" class="fs-6">ADVISORY</th>
               <th scope="col" class="qr-code fs-6">ACTION</th>
             </tr>
           </thead>
-          <?php if(count($studentData->getResult()) > 0): ?>
+          <?php if(count($teacherData->getResult()) > 0): ?>
           <tbody id="tableBody">
-            <?php foreach ($studentData->getResult() as $student) {
-              $LRN = $student->LRN;
-              $ID = $student->ID;
-              $fName = $student->FIRSTNAME;
-              $lName = $student->LASTNAME;
-              $Grade = $student->GRADE;
-              $gender = $student->GENDER;
-              $Section = $student->SECTION;
-              $qr = $fName . " " . $lName . " " . $student->MIDDLENAME . " " . $LRN . " " . $gender . " " . $Grade . " " . $Section;
-
-              $decryptedQRCode = password_verify($qr, $student->QR);
-              $qrCode = ($decryptedQRCode) ? $qr : null;
+            <?php foreach ($teacherData->getResult() as $teacher) {
+                $firstName = $teacher->FNAME;
+                $lastName = $teacher->LNAME;
+                $age = $teacher->AGE;
+                $advisory = ($teacher->YEAR + 6)." - ".$teacher->SECTION;
             ?>
               <tr>
-                <td><?php echo $LRN; ?></td>
-                <td><?php echo $fName; ?></td>
-                <td><?php echo $lName; ?></td>
-                <td><?php echo ((int)$Grade + 6); ?></td>
-                <td><?php echo $Section; ?></td>
+                <td><?php echo $firstName; ?></td>
+                <td><?php echo $lastName; ?></td>
+                <td><?php echo $age; ?></td>
+                <td><?php echo $advisory; ?></td>
                 <td>
-                  <div class="qrcode-container" id="qrcode-container">
-                    <input type="hidden" id="id" value="<?php echo $qrCode; ?>">
-                    <div id="qrcode" class="qrcode  mt-2" style="width: 25px;">
-                    </div>
-                  </div>
+                  <!-- Button trigger modal -->
+                  <a href="admin_teacher_subjects/<?php echo $teacher->ID;?>" class="btn" style="color: #fff;
+                        background-color: #007bff;
+                        border-color: #007bff;">
+                    SECTIONS
+                </a>
                 </td>
-                <td>
-                  <a href="/convertStudentDataToPDF<?php echo "/".$ID?>" class="btn btn-success">
-                    DOWNLOAD
-                  </a>
-                </td>
+
               </tr>
             <?php } ?>
           </tbody>
           <?php endif; ?>
-          <?php if(count($studentData->getResult()) == 0):?>
+          <?php if(count($teacherData->getResult()) == 0):?>
           <tbody id="tableBody">
             <tr>
-              <td class="text-danger fw-bold">N/A</td>
-              <td class="text-danger fw-bold">N/A</td>
-              <td class="text-danger fw-bold">N/A</td>
               <td class="text-danger fw-bold">N/A</td>
               <td class="text-danger fw-bold">N/A</td>
               <td class="text-danger fw-bold">N/A</td>

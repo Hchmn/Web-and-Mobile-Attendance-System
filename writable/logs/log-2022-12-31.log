@@ -1,0 +1,478 @@
+CRITICAL - 2022-12-31 00:40:13 --> Undefined property: App\Controllers\Admin::$accountModedl
+in APPPATH\Controllers\Admin.php on line 234.
+ 1 APPPATH\Controllers\Admin.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$accountModedl', 'APPPATH\\Controllers\\Admin.php', 234)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 00:40:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL' at line 3
+CRITICAL - 2022-12-31 00:40:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `account`
+WHERE CLASS_ID NOT NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `account`
+WHERE CLASS_ID NOT NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `account`
+WHERE CLASS_ID NOT NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `account`
+WHERE CLASS_ID NOT NULL', [], false)
+ 5 SYSTEMPATH\Model.php(771): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(234): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:41:37 --> Undefined variable $studentData
+in APPPATH\Views\admin\teacher.php on line 76.
+ 1 APPPATH\Views\admin\teacher.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'APPPATH\\Views\\admin\\teacher.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher', [], true)
+ 5 APPPATH\Controllers\Admin.php(239): view('admin/teacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:41:37 --> Undefined variable $studentData
+in APPPATH\Views\admin\teacher.php on line 76.
+ 1 APPPATH\Views\admin\teacher.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'APPPATH\\Views\\admin\\teacher.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher', [], true)
+ 5 APPPATH\Controllers\Admin.php(239): view('admin/teacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:43:58 --> Undefined property: stdClass::$LRN
+in APPPATH\Views\admin\teacher.php on line 78.
+ 1 APPPATH\Views\admin\teacher.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$LRN', 'APPPATH\\Views\\admin\\teacher.php', 78)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher', [], true)
+ 5 APPPATH\Controllers\Admin.php(239): view('admin/teacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 00:49:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ACCOUNT' at line 1
+CRITICAL - 2022-12-31 00:49:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ACCOUNT' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * ACCOUNT', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * ACCOUNT')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * ACCOUNT')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('SELECT * ACCOUNT')
+ 5 APPPATH\Controllers\Admin.php(234): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 00:49:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ACCOUNT' at line 1
+CRITICAL - 2022-12-31 00:49:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ACCOUNT' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * ACCOUNT', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * ACCOUNT')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * ACCOUNT')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('SELECT * ACCOUNT')
+ 5 APPPATH\Controllers\Admin.php(234): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:49:54 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+in APPPATH\Controllers\Admin.php on line 234.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:49:59 --> Undefined property: stdClass::$LRN
+in APPPATH\Views\admin\teacher.php on line 78.
+ 1 APPPATH\Views\admin\teacher.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$LRN', 'APPPATH\\Views\\admin\\teacher.php', 78)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher', [], true)
+ 5 APPPATH\Controllers\Admin.php(239): view('admin/teacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 00:56:37 --> Undefined variable $account
+in APPPATH\Views\admin\teacher.php on line 89.
+ 1 APPPATH\Views\admin\teacher.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $account', 'APPPATH\\Views\\admin\\teacher.php', 89)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher', [], true)
+ 5 APPPATH\Controllers\Admin.php(241): view('admin/teacher', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teachers()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:12:38 --> Undefined property: stdClass::$FNAME
+in APPPATH\Views\admin\teacher_subject.php on line 82.
+ 1 APPPATH\Views\admin\teacher_subject.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$FNAME', 'APPPATH\\Views\\admin\\teacher_subject.php', 82)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher_subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher_subject', [], true)
+ 5 APPPATH\Controllers\Admin.php(252): view('admin/teacher_subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teacher_subjects('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:16:19 --> Undefined property: stdClass::$GRADE
+in APPPATH\Views\admin\teacher_subject.php on line 82.
+ 1 APPPATH\Views\admin\teacher_subject.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$GRADE', 'APPPATH\\Views\\admin\\teacher_subject.php', 82)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher_subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher_subject', [], true)
+ 5 APPPATH\Controllers\Admin.php(252): view('admin/teacher_subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teacher_subjects('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:16:19 --> Undefined property: stdClass::$GRADE
+in APPPATH\Views\admin\teacher_subject.php on line 82.
+ 1 APPPATH\Views\admin\teacher_subject.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$GRADE', 'APPPATH\\Views\\admin\\teacher_subject.php', 82)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\teacher_subject.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/teacher_subject', [], true)
+ 5 APPPATH\Controllers\Admin.php(252): view('admin/teacher_subject', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_teacher_subjects('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:20:02 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_records()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:20:10 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_records()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:20:46 --> Undefined variable $isSection
+in APPPATH\Views\user\sections.php on line 146.
+ 1 APPPATH\Views\user\sections.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isSection', 'APPPATH\\Views\\user\\sections.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections', [], true)
+ 5 APPPATH\Controllers\Home.php(277): view('user/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->section_list()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:21:00 --> Undefined variable $isSection
+in APPPATH\Views\user\sections.php on line 146.
+ 1 APPPATH\Views\user\sections.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isSection', 'APPPATH\\Views\\user\\sections.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections', [], true)
+ 5 APPPATH\Controllers\Home.php(277): view('user/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->section_list()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 01:21:32 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 36.
+ 1 APPPATH\Controllers\Home.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->student_records()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:47:16 --> Undefined variable $isSection
+in APPPATH\Views\user\sections.php on line 146.
+ 1 APPPATH\Views\user\sections.php(146): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isSection', 'APPPATH\\Views\\user\\sections.php', 146)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/sections', [], true)
+ 5 APPPATH\Controllers\Home.php(277): view('user/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->section_list()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:54:56 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$result
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$result', 'APPPATH\\Controllers\\Admin.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:55:31 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:55:59 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to int
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class CodeIgniter\\Database\\MySQLi\\Result could not be converted to int', 'APPPATH\\Controllers\\Admin.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:56:25 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$numbers
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$numbers', 'APPPATH\\Controllers\\Admin.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:56:55 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to int
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class CodeIgniter\\Database\\MySQLi\\Result could not be converted to int', 'APPPATH\\Controllers\\Admin.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:57:49 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$COUNT
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$COUNT', 'APPPATH\\Controllers\\Admin.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:58:01 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 02:58:45 --> json_decode(): Argument #1 ($json) must be of type string, CodeIgniter\Database\MySQLi\Result given
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): json_decode(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:00:31 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$result
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$result', 'APPPATH\\Controllers\\Admin.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 03:01:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as result from teacher_sections ts 
+                          where ts.TEACH...' at line 1
+CRITICAL - 2022-12-31 03:01:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as result from teacher_sections ts 
+                          where ts.TEACH...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'')
+ 5 APPPATH\Controllers\Admin.php(278): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-31 03:01:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as result from teacher_sections ts 
+                          where ts.TEACH...' at line 1
+CRITICAL - 2022-12-31 03:01:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as result from teacher_sections ts 
+                          where ts.TEACH...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('SELECT * as result from teacher_sections ts 
+                          where ts.TEACHER_ID = \'1\' && ts.GRADE_SECTION_ID = \'13  \'
+                          && ts.`ROLE` = \'2\' && lower(ts.SUBJECT) = \'English\'')
+ 5 APPPATH\Controllers\Admin.php(278): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:02:13 --> count(): Argument #1 ($value) must be of type Countable|array, CodeIgniter\Database\MySQLi\Result given
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): count(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:02:37 --> count(): Argument #1 ($value) must be of type Countable|array, CodeIgniter\Database\MySQLi\Result given
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): count(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:04:25 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:05:46 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:06:10 --> Attempt to read property "result" on array
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "result" on array', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:06:19 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:06:24 --> Undefined array key "result"
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result"', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:06:36 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:07:52 --> Attempt to read property "num_rows" on array
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "num_rows" on array', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:08:01 --> Attempt to read property "num_rows" on array
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "num_rows" on array', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:09:58 --> Undefined array key "field_count"
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "field_count"', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:10:34 --> Undefined array key "num_rows"
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "num_rows"', 'APPPATH\\Controllers\\Admin.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:11:23 --> json_decode(): Argument #1 ($json) must be of type string, CodeIgniter\Database\MySQLi\Result given
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): json_decode(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:11:41 --> json_decode(): Argument #1 ($json) must be of type string, CodeIgniter\Database\MySQLi\Result given
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): json_decode(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:12:31 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Controllers\Admin.php on line 282.
+ 1 APPPATH\Controllers\Admin.php(282): count('{"connID":{},"resultID":{},"resultArray":[],"resultObject":[],"customResultObject":[],"currentRow":0,"rowData":null}')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:17:29 --> Attempt to read property "result" on array
+in APPPATH\Controllers\Admin.php on line 280.
+ 1 APPPATH\Controllers\Admin.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "result" on array', 'APPPATH\\Controllers\\Admin.php', 280)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:17:55 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Admin.php on line 281.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_assign_new_subject('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-31 03:22:37 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 77
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(77): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
