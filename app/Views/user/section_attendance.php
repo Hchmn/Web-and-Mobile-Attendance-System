@@ -46,18 +46,19 @@
             <li>
               <a href="/teachersettings">Settings</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="/section_list" class="text-warning">Attendance</a>
-            </li>
+            </li> -->
             <li>
               <a href="/notification" class="notification">
                   <span>Notification</span>
-                  <?php if(session()->has("notification_number")):?>
-                    <span class="badge"><?php echo session()->get("notification_number")?></span>
-                  <?php endif; ?>
-                  <?php if(!(session()->has("notification_number"))): ?>
-                    <span class="badge">0</span>
-                  <?php endif; ?>
+                  <?php if(session()->has("notification_number") && session()->get("notification_number") > 0):?>
+                    <span class="badge">
+                    <?php 
+                      $notifNumber = session()->get("notification_number");
+                      echo $notifNumber;
+                    ?>
+                <?php endif; ?>
               </a>
             </li>
             <li>

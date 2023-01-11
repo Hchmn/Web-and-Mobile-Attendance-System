@@ -1,0 +1,3 @@
+<script>
+  $("#calendar").evoCalendar();
+</script>

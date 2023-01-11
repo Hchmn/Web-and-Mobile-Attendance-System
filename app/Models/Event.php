@@ -9,5 +9,5 @@ class Event extends Model
   protected $table = 'event';
 
   protected $primaryKey = 'ID';
-  protected $allowedFields = ['NAME', 'VENUE', 'SCHEDULE', 'DATE_CREATED'];
+  protected $allowedFields = ['NAME', 'VENUE', 'SCHEDULE', 'DATE_CREATED', 'TYPE'];
 }

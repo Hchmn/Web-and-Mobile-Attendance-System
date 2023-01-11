@@ -71,7 +71,7 @@ $routes->get("convertStudentDataToPDF/(:any)", 'PdfController::studenHTMLTOPDF/$
 
 
 //ADMIN ROUTES
-$routes->get('admin_homepage', 'Admin::homepage');
+// $routes->get('admin_homepage', 'Admin::homepage');
 $routes->get('admin_add_user', 'Admin::add_user');
 $routes->get('admin_settings', 'Admin::admin_settings');
 $routes->post('create_user', 'Admin::create_user');
@@ -85,7 +85,9 @@ $routes->get('admin_teachers', 'Admin::admin_teachers' );
 $routes->get('admin_teacher_subjects/(:num)', 'Admin::admin_teacher_subjects/$1');
 $routes->post('admin_assign_subject/(:num)', 'Admin::admin_assign_new_subject/$1');
 $routes->get('admin_grade_level', 'Admin::admin_grade_level');
-
+$routes->get('admin_homepage', 'Admin::admin_calendar');
+$routes->get('admin_student_status', 'Admin::admin_student_status');
+$routes->post('admin_update_student_status', 'Admin::admin_update_student_status');
 
 /*
  * --------------------------------------------------------------------

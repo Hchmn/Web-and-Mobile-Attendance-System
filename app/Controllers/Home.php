@@ -9,6 +9,7 @@ class Home extends BaseController
     {
         if(session()->has('classID')){
             $class_id = session()->get('classID');
+            
             $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
                 ->first();
                 if($queryBuilder){
@@ -29,10 +30,11 @@ class Home extends BaseController
         return view('user/homepage');
     }
 
-    public function student_records()
-    {   $class_id = session()->get('classID');
+    public function student_records(){
+        $class_id = session()->get('classID'); 
         $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
             ->first();
+        
         $studentBuilder = $this->studentModel->select('*')->WHERE("GRADE",$queryBuilder['YEAR'])->WHERE('SECTION', $queryBuilder['SECTION'])->get();
         
         $data = [
@@ -204,7 +206,7 @@ class Home extends BaseController
     }
 
     public function notification(){
-        if(session()->has('classID')){
+        if(session()->has('classID')) {
             $class_id = session()->get('classID');
             $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
                 ->first();
@@ -232,7 +234,7 @@ class Home extends BaseController
             if($status == "1" || $status == "0"){
                 $studentDATA = [
                     "STATUS" => $status,
-                    "ABSENCES" => 0,
+                    "REQUESTED" => 1,
                 ];
                 $this->studentModel->update($id, $studentDATA);
                 session()->setFlashdata('success_update', true);
@@ -430,10 +432,6 @@ class Home extends BaseController
         $id = $studentId;
         $queryBuilder = $this->studentAttendance->select("*")->WHERE("STUDENT_ID", $id)->get();
         
-        // if(count($queryBuilder)->getResult() > 0){
-
-        // }
-
         $studentData = array();
         
         $queryStudent = $this->studentModel->select("*")->WHERE("ID", $id)->first();

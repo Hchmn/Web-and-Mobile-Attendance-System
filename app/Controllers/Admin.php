@@ -177,12 +177,14 @@ class Admin extends BaseController
       $eventName = $this->request->getVar('eventname');
       $eventVenue = $this->request->getVar('eventvenue');
       $eventDate = $this->request->getVar('eventdate');
+      $eventType = $this->request->getVar('eventtype');
       $created_at = date("Y-m-d H:i:s");
       $eventData = [
         'NAME' => $eventName,
         'VENUE' => $eventVenue,
         'SCHEDULE' => $eventDate,
         'DATE_CREATED' => $created_at,
+        'TYPE' => $eventType,
       ];
       $this->eventModel->save($eventData);
 
@@ -299,6 +301,37 @@ class Admin extends BaseController
 
   public function admin_grade_level(){
     return view ('admin/students');
+  }
+
+  public function admin_calendar(){
+    $result = $this->eventModel->select("*")->get();
+    $data = [
+      "events" => $result
+    ];
+    return view('admin/calendar', $data);
+  }
+
+  public function admin_student_status(){
+    $result = $this->studentModel->select("*")->where("REQUESTED", 1)->get();
+    $data = [
+      "studentStatusData" => $result
+    ];
+    return view ('admin/studentstatus', $data);
+  }
+
+  public function admin_update_student_status(){
+
+    if ($this->request->getMethod() == 'post') {
+      $id = $this->request->getVar("id");
+      $studentDATA = [
+        "STATUS" => 0,
+        "REQUESTED" => 0,
+        "ABSENCES" => 0,
+      ];
+      $this->studentModel->update($id, $studentDATA);
+      session()->setFlashdata('success_update', true);
+    }
+    return redirect()->to('admin_student_status');
   }
 
 
