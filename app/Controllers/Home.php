@@ -87,36 +87,10 @@ class Home extends BaseController
 
     public function event()
     {
-        if(session()->has('classID')){
-            $class_id = session()->get('classID');
-            $queryBuilder = $this->gradesectionModel->where('ID', $class_id)
-                ->first();
-                if($queryBuilder){
-                    $grade = $queryBuilder['YEAR'];
-                    $section = $queryBuilder['SECTION'];
-                    $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->get();
-                    $notification = $this->studentModel->select("*")->where("GRADE", $grade)->WHERE("SECTION", $section)->WHERE("STATUS", 1)->countAllResults(); 
-                    $data = [
-                        "notification_number" => $notification,
-                        "section" => ucfirst(strtolower($section)),
-                        "grade" => $grade + 6,
 
-                    ];
-                    session()->set($data);
-                    $queryBuilder = $this->eventModel->select('*')
-                        ->get();
-
-                    $data = [
-                        'eventData' => $queryBuilder
-                    ];
-                    return view('user/event', $data);
-                }
-        }
-        $queryBuilder = $this->eventModel->select('*')
-            ->get();
-
+        $result = $this->eventModel->select("*")->get();
         $data = [
-            'eventData' => $queryBuilder
+          "events" => $result
         ];
         return view('user/event', $data);
     }
@@ -233,7 +207,7 @@ class Home extends BaseController
             $status = $this->request->getVar('status');
             if($status == "1" || $status == "0"){
                 $studentDATA = [
-                    "STATUS" => $status,
+                    "STATUS" => 1,
                     "REQUESTED" => 1,
                 ];
                 $this->studentModel->update($id, $studentDATA);
@@ -249,81 +223,133 @@ class Home extends BaseController
     public function section_list(){
 
         $queryBuilderSection = $this->gradesectionModel->select("*")->get();
-    
-        $data = [
-        'studentSection' => $queryBuilderSection
-        ];
         $teacherID = session()->get("id");
 
-        $queryBuilder = $this->teacherSectionsModel->select("*")->where("TEACHER_ID", $teacherID)->get();
-        $sectionListData = array();
-        if(count($queryBuilder->getResult()) > 0){
-            foreach($queryBuilder->getResult() as $result){
-                $gradeSectionID = $result->GRADE_SECTION_ID;
-                $querySections = $this->gradesectionModel->select("*")->WHERE("ID",$gradeSectionID)->get();
-                if(count($querySections->getResult()) > 0){
-                    $querySections = $querySections->getRow();
-                    $sectionList = array($querySections->ID, $querySections->YEAR, $querySections->SECTION);
-                    array_push($sectionListData, $sectionList);
-                }
-            }
-            $DATA = [
-                "sectionList" => $sectionListData,
-                "isSection" => TRUE,
-                "studentSection" => $queryBuilderSection
-            ];
+        $queryBuilder = $this->teacherSectionsModel
+                ->query("SELECT ts.id as ID, TEACHER_ID, GRADE_SECTION_ID, g.`YEAR` as 'YEAR', g.`SECTION` as 'SECTION', 
+                        SUBJECT  from teacher_sections ts 
+                        inner join gradesection g on g.ID = ts.GRADE_SECTION_ID 
+                        where ts.TEACHER_ID = '$teacherID'");
 
-            return view ("user/sections", $DATA);
-            
-        }
+        $data = [
+            "teacherSections" => $queryBuilder
+        ];
         return view ('user/sections', $data);
     }
 
     public function section_attendance($section = "", $grade = 0, $gradeSectionID = 0){
-        $GRADE_SECTION_ID = $gradeSectionID;
-        $grade = $grade;
-        $section = $section;
+
         $teacherID = session()->get("id");
 
-        date_default_timezone_set('Asia/Manila');
-        $date_today = date("Y-m-d");
-        $queryBuilder = $this->studentAttendance->select("*")->WHERE("GRADE_SECTION_ID", $GRADE_SECTION_ID)->WHERE("DATE", $date_today)->WHERE("TEACHER_ID", $teacherID)->get();
-        if(count($queryBuilder->getResult()) > 0){
-            $validateAttendanceToday = false;
-            $result = "";
-            $attendance_data = array();
-            $student_id = "";
-            foreach($queryBuilder->getResult() as $test){
-                $result = $test->DATE_START;
-                $student_id = $test->STUDENT_ID;
-                $studentQuery = $this->studentModel->select("*")->WHERE("ID",$student_id)->get();
-                $studentQuery = $studentQuery->getRow();
-                $studentName = $studentQuery->FIRSTNAME." ".$studentQuery->LASTNAME;
-                $createArray = array($test->TIME_IN,$test->DATE_START, $test->DATE_END, $studentName);
-                array_push($attendance_data,$createArray);
-            }
-            $result = substr($result, 0, 10);
-            if($date_today == $result){
-                $validateAttendanceToday = true;
-                
-                $DATA = [
-                    "attendanceData" => $attendance_data,
-                    "validateAttendanceToday" => $validateAttendanceToday,
-                    "grade" => $grade,
-                    "section" => $section,
-                    "gradeSectionID" => $GRADE_SECTION_ID
-                ];
-                return view ('user/section_attendance', $DATA);
-            }
-        }
-        $DATA = [
-            "validateAttendanceToday" => false,
+        $queryBuilder = $this->studentAttendance
+            ->query("SELECT sa.ID as ID, sa.TIME_IN, sa.`DATE`, sa.DATE_START, sa.DATE_END, sa.GRADE_SECTION_ID, ts.SUBJECT, sa.REMARKS, sa.TEACHER_SECTION_ID  
+                from student_attendance sa
+                    inner join student s on s.ID = sa.STUDENT_ID 
+                    inner join teacher_sections ts on ts.ID = sa.TEACHER_SECTION_ID
+                    where sa.teacher_section_id = '$teacherID'
+                    group by sa.`DATE`");
+
+        $data = [
+            "attendanceData" => $queryBuilder,
+            "sectionName" => $section,
             "grade" => $grade,
-            "section" => $section,
-            "gradeSectionID" => $GRADE_SECTION_ID
+            "gradeSectionId" => $gradeSectionID
         ];
-        return view ('user/section_attendance', $DATA);
+
+        return view ('user/section_attendance', $data);
     }
+
+    public function update_section_date_attendance(){
+        if($this->request->getMethod() == "post"){
+            $remarks = $this->request->getVar("remarks");
+            $date = $this->request->getVar('date');
+            $teacherSectionId = $this->request->getVar('teacher_section_id');
+            $return = $this->request->getVar('return_data');
+            $queryStudentAttendance = $this->studentAttendance
+                ->query("SELECT * from student_attendance where `DATE` = '$date' and TEACHER_SECTION_ID = '$teacherSectionId'");
+            
+            foreach($queryStudentAttendance->getResult() as $studentAttendance){
+                $studentData = [
+                    "REMARKS" => $remarks
+                ];
+
+                $this->studentAttendance->update($studentAttendance->ID, $studentData);
+            }
+            
+            session()->setFlashData("update_attendance", "Successfully Added Attendance");
+
+        }
+        return redirect()->to($return);
+    }
+
+    public function section_date_attendance($date = "", $teacherSectionId = 0){
+        
+        $teacherID = session()->get("id");
+
+        $queryBuilder = $this->studentAttendance
+            ->query("SELECT sa.TIME_IN, sa.ID as ID, s.FIRSTNAME, s.LASTNAME, sa.DATE_START, sa.DATE_END  from student_attendance sa
+                inner join student s on s.ID = sa.STUDENT_ID 
+                where sa.`DATE` = '$date' and sa.TEACHER_SECTION_ID = '$teacherSectionId'
+                and sa.TEACHER_ID = '$teacherID' ");
+        $data = [
+            "studentsAttendance" => $queryBuilder
+        ];
+
+        return view('user/section_student_attendance', $data);
+    }
+
+    // public function section_attendance($section = "", $grade = 0, $gradeSectionID = 0){
+    //     $GRADE_SECTION_ID = $gradeSectionID;
+    //     $grade = $grade;
+    //     $section = $section;
+    //     $teacherID = session()->get("id");
+
+    //     date_default_timezone_set('Asia/Manila');
+    //     $date_today = date("Y-m-d");
+    //     $queryBuilder = $this->studentAttendance->select("*")->WHERE("GRADE_SECTION_ID", $GRADE_SECTION_ID)->WHERE("DATE", $date_today)->WHERE("TEACHER_ID", $teacherID)->get();
+    //     if(count($queryBuilder->getResult()) > 0){
+    //         $validateAttendanceToday = false;
+    //         $result = "";
+    //         $attendance_data = array();
+    //         $student_id = "";
+    //         foreach($queryBuilder->getResult() as $test){
+    //             $result = $test->DATE_START;
+    //             $student_id = $test->STUDENT_ID;
+    //             $studentQuery = $this->studentModel->select("*")->WHERE("ID",$student_id)->get();
+    //             $studentQuery = $studentQuery->getRow();
+    //             $studentName = $studentQuery->FIRSTNAME." ".$studentQuery->LASTNAME;
+    //             $createArray = array($test->TIME_IN,$test->DATE_START, $test->DATE_END, $studentName);
+    //             array_push($attendance_data,$createArray);
+    //         }
+    //         $result = substr($result, 0, 10);
+    //         if($date_today == $result){
+    //             $validateAttendanceToday = true;
+                
+    //             $DATA = [
+    //                 "attendanceData" => $attendance_data,
+    //                 "validateAttendanceToday" => $validateAttendanceToday,
+    //                 "grade" => $grade,
+    //                 "section" => $section,
+    //                 "gradeSectionID" => $GRADE_SECTION_ID
+    //             ];
+    //             return view ('user/section_attendance', $DATA);
+    //         }
+    //     }
+    //     $DATA = [
+    //         "validateAttendanceToday" => false,
+    //         "grade" => $grade,
+    //         "section" => $section,
+    //         "gradeSectionID" => $GRADE_SECTION_ID
+    //     ];
+    //     return view ('user/section_attendance', $DATA);
+    // }
+
+    // public function test(){
+    //     $result = $this->studentModel->query("SELECT * from STUDENT");
+
+    //     print_r($result->getResult()[0]-.);
+    // }
+    
 
     public function add_section_attendance(){
 

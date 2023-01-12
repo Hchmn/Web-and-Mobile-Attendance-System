@@ -60,6 +60,9 @@ $routes->post('add_section_attendance', 'Home::add_section_attendance');
 $routes->post('add_section', 'Home::add_section');
 $routes->get('viewstudentdata/(:any)', 'Home::view_student_data/$1');
 $routes->post("update_event_schedule", 'Home::update_event_schedule');
+$routes->get('section_date_attendance/(:any)', 'Home::section_date_attendance/$1');
+$routes->post('update_section_date_attendance', 'Home::update_section_date_attendance');
+$routes->get("test", 'Home::test');
 
 
 
@@ -67,7 +70,7 @@ $routes->post("update_event_schedule", 'Home::update_event_schedule');
 $routes->get('php', 'PdfController::index');
 $routes->get("convertToPDF/(:any)", 'PdfController::htmlToPDF/$1');
 $routes->get("convertStudentDataToPDF/(:any)", 'PdfController::studenHTMLTOPDF/$1');
-
+$routes->get("convertStudentAttendanceToPDF/(:any)", 'PdfController::studentAttendanceToPDF/$1');
 
 
 //ADMIN ROUTES
@@ -88,6 +91,9 @@ $routes->get('admin_grade_level', 'Admin::admin_grade_level');
 $routes->get('admin_homepage', 'Admin::admin_calendar');
 $routes->get('admin_student_status', 'Admin::admin_student_status');
 $routes->post('admin_update_student_status', 'Admin::admin_update_student_status');
+$routes->get('admin_year/(:any)', 'Admin::admin_year/$1');
+$routes->get('admin_section/(:any)', 'Admin::admin_section/$1');
+$routes->get("admin_section_student_attendance/(:any)", 'Admin::admin_section_student_attendance/$1');
 
 /*
  * --------------------------------------------------------------------

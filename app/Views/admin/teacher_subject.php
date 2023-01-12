@@ -18,13 +18,14 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
 
 </head>
 
 <body class=" ">
 
   <div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
+  <nav id="sidebar">
       <div class="p-4 pt-5">
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
@@ -47,6 +48,9 @@
           </li>
           <li>
             <a href="/admin_student">Add Student</a>
+          </li>
+          <li>
+            <a href="/admin_student_status">Student Status</a>
           </li>
           <li>
             <a href="/admin_teachers">Teachers</a>
@@ -149,7 +153,7 @@
               <th scope="col" class="fs-6">SECTION</th>
               <th scope="col" class="fs-6">SUBJECT</th>
               <th scope="col" class="fs-6">ROLE</th>
-              <th scope="col" class="qr-code fs-6">ACTION</th>
+              <!-- <th scope="col" class="qr-code fs-6">ACTION</th> -->
             </tr>
           </thead>
           <?php if(count($teacherData->getResult()) > 0): ?>
@@ -165,14 +169,14 @@
                 <td><?php echo $year; ?></td>
                 <td><?php echo $subject ?></td>
                 <td><?php echo $role; ?></td>
-                <td>
+                <!-- <td> -->
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Edit<?php echo $teacher->ID; ?>" style="color: #fff;
+                  <!-- <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Edit<?php echo $teacher->ID; ?>" style="color: #fff;
                         background-color: #007bff;
                         border-color: #007bff;">
                     UPDATE
-                  </button>
-                </td>
+                  </button> -->
+                <!-- </td> -->
 
               </tr>
             <?php } ?>

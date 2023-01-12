@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+
 </head>
 <style>
 </style>
@@ -40,15 +42,15 @@
           <li>
             <a href="studentrecords">Student Records</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="studentattendance">Year Level Records</a>
-          </li>
+          </li> -->
           <li>
             <a href="teachersettings">Settings</a>
           </li>
-          <!-- <li>
+          <li>
               <a href="section_list">Attendance</a>
-          </li> -->
+          </li>
           <li>
             <a href="notification" class="notification text-warning">
                 <span>Notification</span>
@@ -75,8 +77,8 @@
             <input class="form-control rounded-pill border border-dark" type="text" id="searchData" placeholder="Search.." style="width:250px;">
         </div>
         <?php if (session()->has('success_update')) : ?>
-            <div class="alert alert-success w-100">
-            Student Status Successfully Updated
+            <div class="alert alert-success w-50">
+            Student Status Requested to the admin
             </div>
         <?php endif; ?>
         <?php if((session()->has('failed_update'))) : ?>

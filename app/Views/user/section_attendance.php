@@ -12,8 +12,11 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
+  
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+
 </head>
 <style>
 </style>
@@ -40,11 +43,14 @@
             <li>
               <a href="/studentrecords">Student Records</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="/studentattendance">Year Level Records</a>
-            </li>
+            </li> -->
             <li>
               <a href="/teachersettings">Settings</a>
+            </li>
+            <li>
+              <a href="attendance" class="text-warning">Attendance</a>
             </li>
             <!-- <li>
               <a href="/section_list" class="text-warning">Attendance</a>
@@ -70,121 +76,87 @@
 
       <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5">
-          <h1 class="fw-bold text-info">Classroom Attendance<?php echo ": ".Date("Y-m-d")?></h1>
+          <h1 class="fw-bold text-info">Classroom Attendance</h1>
           <div class="">
-            <div>
-              <p class="fs-3 fw-bold mb-0 text-info"><?php echo "Grade" .": ".$grade + 6?></p>
-              <p class="fs-3 fw-bold mb-2 text-info"><?php echo "Section" .": ".$section?></p>
-            </div>
-              <?php
-                if($validateAttendanceToday): ?>
-                  <button class="btn btn-success" type="submit" data-bs-toggle="modal" data-bs-target="#Edit" disabled = "true">
-                    START ATTENDANCE
-                  </button>
-              <?php endif;?>
-              
-              <?php
-                if(!$validateAttendanceToday): ?>
-                  <button class="btn btn-success" type="submit" data-bs-toggle="modal" data-bs-target="#Edit">
-                    START ATTENDANCE
-                  </button>
-              <?php endif;?>
 
-              <?php if (session()->has('added_attendance')) : ?>
-                  <div class="alert alert-success w-100 mt-3">
-                    <?php echo session()->get('added_attendance');?>
-                  </div>
-              <?php endif; ?>
-              <?php if (session()->has('enroll_students')) : ?>
-                  <div class="alert alert-danger w-100 mt-3">
-                    <?php echo session()->get('enroll_students');?>
-                  </div>
-              <?php endif; ?>
-              
-              <?php if (session()->has('failed_attendance')) : ?>
-                  <div class="alert alert-danger w-100 mt-3">
-                    <?php echo session()->get('failed_attendance');?>
-                  </div>
-              <?php endif; ?>
           </div>
           <div class="table-responsive  mt-2">
-          
-          <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <form method="post" action="/add_section_attendance">
-                      <div class="modal-header" style="justify-content: center; font-weight:bolder;">
-                        <h3 class="modal-title">START ATTENDANCE</h3>
-                      </div>
-                      <div class="modal-body">
-                        <div class="col-md-12">
-                            <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 text-danger">Must fill the required fields</label>
-                            <input type="hidden" value="<?php echo $gradeSectionID;?>" name="gradeSectionID">
-                            <input type="hidden" value="<?php echo $grade;?>" name="grade">
-                            <input type="hidden" value="<?php echo $section;?>" name="section">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="form-group " style="width:140%; height:120%;">
-                            <div class="mb-2 w-100 d-flex align-items-center">
-                              <label for="exampleInputEmail1" class="form-label fs-6 w-50 px-2 mt-2 fw-bold">Date Started</label>
-                              <input type="datetime-local" name="date_started"  value="" class="form-control w-100">
-                              <input type="hidden" value="" name="id">
-                            </div>
-                            <div class="mb-2 w-100 d-flex align-items-center mt-3">
-                              <label for="exampleInputEmail1" class="form-label fs-6 w-50 px-2 mt-2 fw-bold">Date End</label>
-                              <input type="datetime-local" name="date_end"  value="" class="form-control w-100">
-                              <input type="hidden" value="" name="id">
-                            </div>
-                          </div>
-                        </div>
-                        <div style="clear:both;"></div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-success">Save changes</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  </div>
-                </div>
-              </div>
             <table class="table table-hover">
                 <thead>
                     <tr>
-                    <th scope="col" class="fs-6">Name</th>
-                    <th scope="col" class="fs-6">Time-In</th>
-                    <th scope="col" class="fs-6">Attendance Started</th>
-                    <th scope="col" class="fs-6">Attendance Ended</th>
+                    <th scope="col" class="fs-6">Date</th>
+                    <th scope="col" class="fs-6">Date Start</th>
+                    <th scope="col" class="fs-6">Date End</th>
+                    <th scope="col" class="fs-6">Remarks</th>
+                    <th scope="col" class="fs-6">View</th>
+                    <th scope="col" class="fs-6">Action</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                  <?php if($validateAttendanceToday):?>
                     <?php
-                      for($x = 0; $x < sizeof($attendanceData); $x++){
-                        $time_in = ($attendanceData[$x][0] == NULL)? "N/A" : $attendanceData[$x][0];
-                        $date_start = $attendanceData[$x][1];
-                        $date_end = $attendanceData[$x][2];
-                        $fullName = $attendanceData[$x][3];
+                      foreach($attendanceData->getResult() as $data){
+                        
                     ?>
                       <tr class="">
-                          <td><?php echo $fullName;?></td>
-                          <td><?php echo $time_in;?></td>
-                          <td><?php echo $date_start;?></td>
-                          <td><?php echo $date_end;?></td>
+                          <td><?php echo $data->DATE;?></td>
+                          <td><?php echo $data->DATE_START;?></td>
+                          <td><?php echo $data->DATE_END;?></td>
+                          <td><?php echo $data->REMARKS;?></td>
+                          <td>
+                            <a href="/section_date_attendance/<?php echo $data->DATE."/".$data->TEACHER_SECTION_ID;?>" class="btn btn-success">
+                              View
+                            </a>
+                          </td>
+                          <td>
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Edit<?php echo $data->ID;?>" style="color: #fff;
+                                background-color: #007bff;
+                                border-color: #007bff;">
+                                    UPDATE
+                            </button>
+                            <div class="modal fade" id="Edit<?php echo $data->ID;?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form method="post" action="/update_section_date_attendance">
+                                          <div class="modal-header" style="justify-content: center; font-weight:bolder;">
+                                            <h3 class="modal-title">UPDATE REMARK STATUS</h3>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div class="col-md-12">
+                                                <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 text-danger"></label>
+                                            </div>
+                                            <div class="col-md-8">
+                                              <div class="form-group " style="width:140%; height:120%;">
+                                                <div class="mb-2 w-100 d-flex align-items-center">
+                                                  <label for="exampleInputEmail1" class="form-label fs-6 px-2 mt-2 fw-bold">Remark:</label>
+                                                  <Select class="form-control w-100" name="remarks">
+                                                    <option selected hidden value="<?php echo $data->REMARKS;?>"></option>
+                                                    <option value="Late">Late</option>
+                                                    <option value="Present">Present</option>
+                                                    <input type="hidden" name = "date" value = "<?php echo $data->DATE;?>">
+                                                    <input type="hidden" name = "teacher_section_id"value = "<?php echo $data->TEACHER_SECTION_ID;?>">
+                                                    <input type="hidden" name = "return_data" value = "<?php  echo "/gradeSection/".$sectionName . "/" . $grade . "/" . $gradeSectionId;?>">
+                                                  </Select>
+                                                  <!-- <input type="text" name="status"  value="" class="form-control w-100"> -->
+                                            
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div style="clear:both;"></div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                              <button type="submit" class="btn btn-success">Save changes</button>
+                                            </div>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                          </td>
                       </tr>
                     <?php 
                       }
                     ?>
-                  <?php endif; ?>
-                  
-                  <?php if(!$validateAttendanceToday):?>
-                    <tr class="">
-                      <td class="text-danger fw-bold">N/A</td>
-                      <td class="text-danger fw-bold">N/A</td>
-                      <td class="text-danger fw-bold">N/A</td>
-                      <td class="text-danger fw-bold">N/A</td>
-                    </tr>
-                  <?php endif;?>
                 </tbody>
             </table>
           </div>

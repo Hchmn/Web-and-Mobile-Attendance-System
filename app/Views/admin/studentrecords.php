@@ -20,7 +20,7 @@
 <body class=" ">
 
   <div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
+  <nav id="sidebar">
       <div class="p-4 pt-5">
         <div>
           <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
@@ -43,6 +43,9 @@
           </li>
           <li>
             <a href="admin_student">Add Student</a>
+          </li>
+          <li>
+            <a href="admin_student_status">Student Status</a>
           </li>
           <li>
             <a href="admin_teachers">Teachers</a>

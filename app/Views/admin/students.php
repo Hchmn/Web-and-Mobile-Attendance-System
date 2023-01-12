@@ -20,42 +20,45 @@
 <body class=" ">
 
     <div class="wrapper d-flex align-items-stretch">
-        <nav id="sidebar">
-            <div class="p-4 pt-5">
-                <div>
-                <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
-                </a>
-                <p class="mb-3 mt-3 text-center">ADMIN</p>
-                </div>
+    <nav id="sidebar">
+      <div class="p-4 pt-5">
+        <div>
+          <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
+          </a>
+          <p class="mb-3 mt-3 text-center">ADMIN</p>
+        </div>
 
-                <ul class="list-unstyled components mb-5">
-                <li>
-                    <a href="admin_homepage">Homepage</a>
-                </li>
-                <li>
-                    <a href="admin_add_user">Add User</a>
-                </li>
-                <li>
-                    <a href="admin_print_records">Print Records</a>
-                </li>
-                <li>
-                    <a href="admin_settings">Administrator Settings</a>
-                </li>
-                <li>
-                    <a href="admin_student">Add Student</a>
-                </li>
-                <li>
-                    <a href="admin_teachers">Teachers</a>
-                </li>
-                <li>
-                    <a href="admin_grade_level">Year Levels</a>
-                </li>
-                <li>
-                    <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
-                </li>
-                </ul>
-            </div>
-        </nav>
+        <ul class="list-unstyled components mb-5">
+          <li>
+            <a href="/admin_homepage">Homepage</a>
+          </li>
+          <li>
+            <a href="/admin_add_user">Add User</a>
+          </li>
+          <li>
+            <a href="/admin_print_records">Print Records</a>
+          </li>
+          <li>
+            <a href="/admin_settings">Administrator Settings</a>
+          </li>
+          <li>
+            <a href="/admin_student">Add Student</a>
+          </li>
+          <li>
+            <a href="/admin_student_status">Student Status</a>
+          </li>
+          <li>
+            <a href="/admin_teachers">Teachers</a>
+          </li>
+          <li>
+            <a href="/admin_grade_level">Year Levels</a>
+          </li>
+          <li>
+            <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
         <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5">
       <h1 class="mb-2 fw-bold text-info">Student Records</h1>
@@ -71,7 +74,7 @@
             <tr>
               <th scope="row">First Year</th>
               <td>
-                <a href="year/1" class="btn btn-success">
+                <a href="admin_year/1" class="btn btn-success">
                   View
                 </a>
               </td>
@@ -80,7 +83,7 @@
             <tr>
               <th scope="row">Second Year</th>
               <td>
-                <a href="year/2" class="btn btn-success">
+                <a href="admin_year/2" class="btn btn-success">
                   View
                 </a>
               </td>
@@ -89,7 +92,7 @@
             <tr>
               <th scope="row">Third Year</th>
               <td>
-                <a href="year/3" class="btn btn-success">
+                <a href="admin_year/3" class="btn btn-success">
                   View
                 </a>
               </td>
@@ -98,7 +101,7 @@
             <tr>
               <th scope="row">Fourth Year</th>
               <td>
-                <a href="year/4" class="btn btn-success">
+                <a href="admin_year/4" class="btn btn-success">
                   View
                 </a>
               </td>

@@ -303,6 +303,81 @@ class Admin extends BaseController
     return view ('admin/students');
   }
 
+  public function admin_year($year = 0) {
+    $queryBuilder = $this->gradesectionModel->query("SELECT * FROM gradesection where `YEAR` = '$year'");
+    $yearSection = ["First", "Second", "Third", "Fourth"];
+    $data = [
+      "yearSections" => $queryBuilder,
+      "yearName" => $yearSection[$year-1]
+    ];
+  
+    return view ('admin/sections', $data);
+  }
+
+  public function admin_section($sectionID = "", $year = 0, $section = ""){
+    $studentBuilder = $this->studentModel->query("SELECT * from student where GRADE = '$year'
+                  and LOWER(SECTION) = LOWER('$section') ");
+
+    $result = array();
+
+    foreach($studentBuilder->getResult() as $data){
+      $queryNumDaysPresent = $this->studentAttendance->query("SELECT * from student_attendance 
+            WHERE STUDENT_ID  = '$data->ID' and TIME_IN != 'NULL'");
+
+      $queryTotalAttendance = $this->studentAttendance->query("SELECT * from student_attendance 
+            WHERE STUDENT_ID  = '$data->ID'");
+
+      $totalPresent = count($queryNumDaysPresent->getResult());
+      $totalAttendance = count($queryTotalAttendance->getResult());
+      $totalAbsent = $totalAttendance - $totalPresent;
+      $lrn = $data->LRN;
+      $firstName = $data->FIRSTNAME;
+      $lastName = $data->LASTNAME;
+      $gender = $data->GENDER == 1 ? "Male" : "Female";
+      $age = $data->AGE;
+      $ID = $data->ID;
+
+      $studentData = array($ID, $lrn, $firstName, $lastName, $age, $gender, $totalPresent, $totalAbsent, $totalAttendance);
+      array_push($result, $studentData);
+    }
+
+    $data = [
+      "attendanceData" => $result,
+      "year" => $year,
+      "section" => $section
+    ];
+    
+    return view("admin/section_attendance",$data);
+
+  }
+
+  public function admin_section_student_attendance($studentId = 0){
+        $id = $studentId;
+        $queryBuilder = $this->studentAttendance->select("*")->WHERE("STUDENT_ID", $id)->get();
+        
+        $studentData = array();
+        
+        $queryStudent = $this->studentModel->select("*")->WHERE("ID", $id)->first();
+        $studentName = $queryStudent["FIRSTNAME"]." ".$queryStudent["LASTNAME"]; 
+
+        foreach($queryBuilder->getResult() as $data){
+            
+            //get teacher name
+            $queryTeacher = $this->accountModel->select("*")->WHERE("ID", $data->TEACHER_ID)->first();
+            $teacherName = $queryTeacher["FNAME"]." ".$queryTeacher["LNAME"];
+
+            $createArray = array($studentName, $teacherName, $data->TIME_IN, $data->DATE_START, $data->DATE_END);
+
+            array_push($studentData, $createArray);
+
+        }
+        $data = [
+            "student_data" => $studentData,
+            "studentId" => $studentId
+        ];
+        return view ("admin/section_student_attendance",$data);
+  }
+
   public function admin_calendar(){
     $result = $this->eventModel->select("*")->get();
     $data = [
@@ -333,6 +408,8 @@ class Admin extends BaseController
     }
     return redirect()->to('admin_student_status');
   }
+
+  
 
 
 }

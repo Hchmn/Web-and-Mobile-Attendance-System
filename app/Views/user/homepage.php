@@ -14,6 +14,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="<?php echo base_url(); ?>/assets/js/registration.js" charset="utf-8"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+
 </head>
 
 <body class=" ">
@@ -38,15 +40,15 @@
           <li>
             <a href="studentrecords">Student Records</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="studentattendance">Year Level Records</a>
-          </li>
+          </li> -->
           <li>
             <a href="teachersettings">Settings</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="section_list">Attendance</a>
-          </li> -->
+          </li>
           <li>
             <a href="notification" class="notification">
                 <span>Notification</span>

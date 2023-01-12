@@ -29,6 +29,39 @@ class PdfController extends BaseController{
         $dompdf->stream(); 
     }
 
+    public function studentAttendanceToPDF($studentId = 0){
+        $dompdf = new \Dompdf\Dompdf(); 
+        $id = $studentId;
+        $queryBuilder = $this->studentAttendance->select("*")->WHERE("STUDENT_ID", $id)->get();
+        
+        $studentData = array();
+        
+        $queryStudent = $this->studentModel->select("*")->WHERE("ID", $id)->first();
+        $studentName = $queryStudent["FIRSTNAME"]." ".$queryStudent["LASTNAME"]; 
+
+        foreach($queryBuilder->getResult() as $data){
+            
+            //get teacher name
+            $queryTeacher = $this->accountModel->select("*")->WHERE("ID", $data->TEACHER_ID)->first();
+            $teacherName = $queryTeacher["FNAME"]." ".$queryTeacher["LNAME"];
+
+            $createArray = array($studentName, $teacherName, $data->TIME_IN, $data->DATE_START, $data->DATE_END);
+
+            array_push($studentData, $createArray);
+
+        }
+        $data = [
+            "student_data" => $studentData,
+            "studentId" => $studentId,
+            "fullname" => $studentName
+        ];
+
+        $dompdf->loadHtml(view('student_view', $data));
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+        $dompdf->stream(); 
+    }
+
     public function studenHTMLTOPDF($id = 0){
        
         $getID = $id;

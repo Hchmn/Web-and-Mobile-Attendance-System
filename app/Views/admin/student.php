@@ -44,6 +44,9 @@
             <a href="admin_student">Add Student</a>
           </li>
           <li>
+            <a href="admin_student_status">Student Status</a>
+          </li>
+          <li>
             <a href="admin_teachers">Teachers</a>
           </li>
           <li>

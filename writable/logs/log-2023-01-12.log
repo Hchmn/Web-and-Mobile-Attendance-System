@@ -1,0 +1,478 @@
+CRITICAL - 2023-01-12 06:50:03 --> Undefined property: stdClass::$REMARKS
+in APPPATH\Views\user\section_attendance.php on line 104.
+ 1 APPPATH\Views\user\section_attendance.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$REMARKS', 'APPPATH\\Views\\user\\section_attendance.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\section_attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/section_attendance', [], true)
+ 5 APPPATH\Controllers\Home.php(256): view('user/section_attendance', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->section_attendance('MERCURY', '7', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:50:12 --> Undefined property: stdClass::$REMARKS
+in APPPATH\Views\user\section_attendance.php on line 104.
+ 1 APPPATH\Views\user\section_attendance.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$REMARKS', 'APPPATH\\Views\\user\\section_attendance.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\section_attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/section_attendance', [], true)
+ 5 APPPATH\Controllers\Home.php(256): view('user/section_attendance', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->section_attendance('MERCURY', '7', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 06:56:55 --> Unknown column 'ts.TEACHER_SECTION_ID' in 'field list'
+CRITICAL - 2023-01-12 06:56:55 --> Unknown column 'ts.TEACHER_SECTION_ID' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT sa.ID as ID, sa.TIME_IN, sa.`DATE`, sa.DATE_START, sa.DATE_END, sa.GRADE_SECTION_ID, ts.SUBJECT, sa.REMARKS, ts.TEACHER_SECTION_ID  
+                from student_attendance sa
+                    inner join student s on s.ID = sa.STUDENT_ID 
+                    inner join teacher_sections ts on ts.ID = sa.TEACHER_SECTION_ID
+                    where sa.teacher_section_id = \'1\'
+                    group by sa.`DATE`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sa.ID as ID, sa.TIME_IN, sa.`DATE`, sa.DATE_START, sa.DATE_END, sa.GRADE_SECTION_ID, ts.SUBJECT, sa.REMARKS, ts.TEACHER_SECTION_ID  
+                from student_attendance sa
+                    inner join student s on s.ID = sa.STUDENT_ID 
+                    inner join teacher_sections ts on ts.ID = sa.TEACHER_SECTION_ID
+                    where sa.teacher_section_id = \'1\'
+                    group by sa.`DATE`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sa.ID as ID, sa.TIME_IN, sa.`DATE`, sa.DATE_START, sa.DATE_END, sa.GRADE_SECTION_ID, ts.SUBJECT, sa.REMARKS, ts.TEACHER_SECTION_ID  
+                from student_attendance sa
+                    inner join student s on s.ID = sa.STUDENT_ID 
+                    inner join teacher_sections ts on ts.ID = sa.TEACHER_SECTION_ID
+                    where sa.teacher_section_id = \'1\'
+                    group by sa.`DATE`')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('SELECT sa.ID as ID, sa.TIME_IN, sa.`DATE`, sa.DATE_START, sa.DATE_END, sa.GRADE_SECTION_ID, ts.SUBJECT, sa.REMARKS, ts.TEACHER_SECTION_ID  
+                from student_attendance sa
+                    inner join student s on s.ID = sa.STUDENT_ID 
+                    inner join teacher_sections ts on ts.ID = sa.TEACHER_SECTION_ID
+                    where sa.teacher_section_id = \'1\'
+                    group by sa.`DATE`')
+ 5 APPPATH\Controllers\Home.php(249): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->section_attendance('MERCURY', '7', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:06:17 --> Undefined property: App\Controllers\Home::$student_attendance
+in APPPATH\Controllers\Home.php on line 265.
+ 1 APPPATH\Controllers\Home.php(265): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$student_attendance', 'APPPATH\\Controllers\\Home.php', 265)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->update_section_date_attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:06:44 --> Undefined variable $queryAttendance
+in APPPATH\Controllers\Home.php on line 268.
+ 1 APPPATH\Controllers\Home.php(268): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $queryAttendance', 'APPPATH\\Controllers\\Home.php', 268)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->update_section_date_attendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:07:02 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 846.
+ 1 SYSTEMPATH\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Home.php(273): CodeIgniter\Model->update('16', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->update_section_date_attendance()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:34:59 --> Undefined variable $yearLvl
+in APPPATH\Views\user\section_attendance.php on line 137.
+ 1 APPPATH\Views\user\section_attendance.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $yearLvl', 'APPPATH\\Views\\user\\section_attendance.php', 137)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\section_attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/section_attendance', [], true)
+ 5 APPPATH\Controllers\Home.php(259): view('user/section_attendance', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->section_attendance('MERCURY', '7', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:35:41 --> Undefined constant "App\Controllers\request"
+in APPPATH\Controllers\Home.php on line 267.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->update_section_date_attendance()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:18:20 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 79.
+ 1 APPPATH\Views\admin\sections.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:18:26 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 79.
+ 1 APPPATH\Views\admin\sections.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:19:25 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 79.
+ 1 APPPATH\Views\admin\sections.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:19:52 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 79.
+ 1 APPPATH\Views\admin\sections.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:20:06 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 79.
+ 1 APPPATH\Views\admin\sections.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:20:23 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 79.
+ 1 APPPATH\Views\admin\sections.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:20:24 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 79.
+ 1 APPPATH\Views\admin\sections.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:20:51 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 75.
+ 1 APPPATH\Views\admin\sections.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:21:58 --> Undefined variable $ID
+in APPPATH\Views\admin\sections.php on line 80.
+ 1 APPPATH\Views\admin\sections.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ID', 'APPPATH\\Views\\admin\\sections.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:22:51 --> Call to a member function getResult() on array
+in APPPATH\Controllers\Admin.php on line 313.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:23:31 --> Attempt to read property "ID" on string
+in APPPATH\Views\admin\sections.php on line 75.
+ 1 APPPATH\Views\admin\sections.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "ID" on string', 'APPPATH\\Views\\admin\\sections.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:23:44 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\sections.php on line 75.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 4 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:24:20 --> Undefined constant "ID"
+in APPPATH\Views\admin\sections.php on line 75.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 4 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:24:36 --> Undefined variable $section
+in APPPATH\Views\admin\sections.php on line 73.
+ 1 APPPATH\Views\admin\sections.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $section', 'APPPATH\\Views\\admin\\sections.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sections.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sections', [], true)
+ 5 APPPATH\Controllers\Admin.php(314): view('admin/sections', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_year('1')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:26:48 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 327.
+ 1 APPPATH\Controllers\Admin.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Admin.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:26:56 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Controllers\Admin.php on line 327.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:27:11 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Admin.php on line 327.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:27:30 --> Attempt to read property "DATA" on array
+in APPPATH\Controllers\Admin.php on line 327.
+ 1 APPPATH\Controllers\Admin.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "DATA" on array', 'APPPATH\\Controllers\\Admin.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:27:35 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Admin.php on line 327.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:27:46 --> Attempt to read property "DATA" on array
+in APPPATH\Controllers\Admin.php on line 327.
+ 1 APPPATH\Controllers\Admin.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "DATA" on array', 'APPPATH\\Controllers\\Admin.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:28:11 --> Undefined variable $queryNumDaysPresentum
+in APPPATH\Controllers\Admin.php on line 327.
+ 1 APPPATH\Controllers\Admin.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $queryNumDaysPresentum', 'APPPATH\\Controllers\\Admin.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 08:30:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= NULL' at line 2
+CRITICAL - 2023-01-12 08:30:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) as DATA from student_attendance 
+            WHERE STUDENT_ID  = \'2\' and TIME_IN == NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) as DATA from student_attendance 
+            WHERE STUDENT_ID  = \'2\' and TIME_IN == NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) as DATA from student_attendance 
+            WHERE STUDENT_ID  = \'2\' and TIME_IN == NULL')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) as DATA from student_attendance 
+            WHERE STUDENT_ID  = \'2\' and TIME_IN == NULL')
+ 5 APPPATH\Controllers\Admin.php(325): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:30:59 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 326.
+ 1 APPPATH\Controllers\Admin.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Admin.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:31:16 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 326.
+ 1 APPPATH\Controllers\Admin.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Admin.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:31:21 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 326.
+ 1 APPPATH\Controllers\Admin.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Admin.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:50:03 --> Undefined variable $presentDays
+in APPPATH\Controllers\Admin.php on line 332.
+ 1 APPPATH\Controllers\Admin.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $presentDays', 'APPPATH\\Controllers\\Admin.php', 332)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:50:06 --> Undefined variable $presentDays
+in APPPATH\Controllers\Admin.php on line 332.
+ 1 APPPATH\Controllers\Admin.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $presentDays', 'APPPATH\\Controllers\\Admin.php', 332)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:50:24 --> Invalid file: admin/section_attedance.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/section_attedance.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/section_attedance', [], true)
+ 3 APPPATH\Controllers\Admin.php(350): view('admin/section_attedance', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:50:34 --> sizeof(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Views\admin\section_attendance.php on line 87.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/section_attendance', [], true)
+ 4 APPPATH\Controllers\Admin.php(350): view('admin/section_attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:51:07 --> Array to string conversion
+in APPPATH\Views\admin\section_attendance.php on line 91.
+ 1 APPPATH\Views\admin\section_attendance.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\section_attendance.php', 91)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section_attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/section_attendance', [], true)
+ 5 APPPATH\Controllers\Admin.php(350): view('admin/section_attendance', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section('1', '1', 'MERCURY')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:00:13 --> Undefined variable $year
+in APPPATH\Views\admin\section_student_attendance.php on line 65.
+ 1 APPPATH\Views\admin\section_student_attendance.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year', 'APPPATH\\Views\\admin\\section_student_attendance.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\section_student_attendance.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/section_student_attendance', [], true)
+ 5 APPPATH\Controllers\Admin.php(408): view('admin/section_student_attendance', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->admin_section_student_attendance('2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:07:23 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 90
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(90): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:15:50 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 96
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(96): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:16:44 --> Undefined property: stdClass::$LRN
+in APPPATH\Views\student_view.php on line 28.
+ 1 APPPATH\Views\student_view.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$LRN', 'APPPATH\\Views\\student_view.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_view', [], true)
+ 5 APPPATH\Controllers\PdfController.php(45): view('student_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studentAttendanceToPDF('2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:19:09 --> Undefined variable $dompdf
+in APPPATH\Controllers\PdfController.php on line 57.
+ 1 APPPATH\Controllers\PdfController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dompdf', 'APPPATH\\Controllers\\PdfController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studentAttendanceToPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:19:30 --> Undefined variable $fullname
+in APPPATH\Views\student_view.php on line 11.
+ 1 APPPATH\Views\student_view.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fullname', 'APPPATH\\Views\\student_view.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_view', [], true)
+ 5 APPPATH\Controllers\PdfController.php(58): view('student_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studentAttendanceToPDF('2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:20:24 --> Undefined variable $fullname
+in APPPATH\Views\student_view.php on line 11.
+ 1 APPPATH\Views\student_view.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fullname', 'APPPATH\\Views\\student_view.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\student_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('student_view', [], true)
+ 5 APPPATH\Controllers\PdfController.php(59): view('student_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studentAttendanceToPDF('2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

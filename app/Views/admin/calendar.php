@@ -23,53 +23,57 @@
 <body class=" ">
 
     <div class="wrapper d-flex align-items-stretch">
-        <nav id="sidebar">
-            <div class="p-4 pt-5">
-                <div>
-                <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
-                </a>
-                <p class="mb-3 mt-3 text-center">ADMIN</p>
-                </div>
+    <nav id="sidebar">
+      <div class="p-4 pt-5">
+        <div>
+          <a href="#" class="img logo rounded-circle mb-2" style="background-image: url(<?php echo base_url(); ?>/assets/images/user_logo.png);">
+          </a>
+          <p class="mb-3 mt-3 text-center">ADMIN</p>
+        </div>
 
-                <ul class="list-unstyled components mb-5">
-                <li>
-                    <a href="admin_homepage">Homepage</a>
-                </li>
-                <li>
-                    <a href="admin_add_user">Add User</a>
-                </li>
-                <li>
-                    <a href="admin_print_records">Print Records</a>
-                </li>
-                <li>
-                    <a href="admin_settings">Administrator Settings</a>
-                </li>
-                <li>
-                    <a href="admin_student">Add Student</a>
-                </li>
-                <li>
-                    <a href="admin_teachers">Teachers</a>
-                </li>
-                <li>
-                    <a href="admin_grade_level">Year Levels</a>
-                </li>
-                <li>
-                    <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
-                </li>
-                </ul>
-            </div>
-        </nav>
+        <ul class="list-unstyled components mb-5">
+          <li>
+            <a href="admin_homepage">Homepage</a>
+          </li>
+          <li>
+            <a href="admin_add_user">Add User</a>
+          </li>
+          <li>
+            <a href="admin_print_records">Print Records</a>
+          </li>
+          <li>
+            <a href="admin_settings">Administrator Settings</a>
+          </li>
+          <li>
+            <a href="admin_student">Add Student</a>
+          </li>
+          <li>
+            <a href="admin_student_status">Student Status</a>
+          </li>
+          <li>
+            <a href="admin_teachers">Teachers</a>
+          </li>
+          <li>
+            <a href="admin_grade_level">Year Levels</a>
+          </li>
+          <li>
+            <a href="/" onclick="return confirm('Are you sure you want to log out?');">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <div id="content" class="p-4 p-md-5">
-    <div id="" class=" w-100">
-    <?php if (session()->has('event_created')) : ?>
-        <div class="alert alert-success w-25">
-          Event successfully added!
-        </div>
-      <?php endif; ?>
-    <button class="btn btn-success mb-2" type="submit" data-bs-toggle="modal" data-bs-target="#Edit">
-        ADD EVENT
-    </button>
+        <div id="" class=" w-100">
+        <?php if (session()->has('event_created')) : ?>
+            <div class="alert alert-success w-25">
+            Event successfully added!
+            </div>
+        <?php endif; ?>
+        <button class="btn btn-success mb-2" type="submit" data-bs-toggle="modal" data-bs-target="#Edit">
+            ADD EVENT
+        </button>
+
         <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -118,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <div id="calendar" class ="w-100"></div>
+    <div id="calendar" class ="w-100"></div>
     </div>
 <!-- Add jQuery library (required) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>

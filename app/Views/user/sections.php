@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/css/evo-calendar.min.css"/>
+
 </head>
 
 <body class=" ">
@@ -40,15 +42,15 @@
           <li>
             <a href="/studentrecords">Student Records</a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/studentattendance">Year Level Records</a>
-          </li>
+          </li> -->
           <li>
             <a href="/teachersettings">Settings</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="/section_list" class="text-warning">Attendance</a>
-          </li> -->
+          </li>
           <li>
             <a href="/notification" class="notification">
                 <span>Notification</span>
@@ -72,9 +74,9 @@
     <div id="content" class="p-4 p-md-5">
     <h1 class="mb-2 fw-bold text-info">Grade & Sections</h1>
       <!-- Button trigger modal -->
-      <button class="btn btn-success mb-2" type="submit" data-bs-toggle="modal" data-bs-target="#Edit">
+      <!-- <button class="btn btn-success mb-2" type="submit" data-bs-toggle="modal" data-bs-target="#Edit">
           ADD SECTION
-      </button>
+      </button> -->
 
       <?php if (session()->has('add_section_success')) : ?>
           <div class="alert alert-success w-100 mt-3">
@@ -88,81 +90,40 @@
           </div>
       <?php endif; ?>
 
-      <!-- Modal -->
-      <div class="modal fade" id="Edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Add Section</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <form action="/add_section" method="POST">
-              <div class="modal-body">
-
-                <div>
-                  <label for="exampleInputEmail1" class="form-label fs-6">Grade & Section</label>
-                    <select name="section" class="form-select w-50" id="">
-                        <?php 
-                        foreach($studentSection->getResult() as $section)
-                          { 
-                        ?>
-                          <option value="<?php echo $section->ID;?>  "> 
-                          <?php 
-                            echo $section->YEAR+6 ." - ". $section->SECTION;
-                          ?> 
-                        
-                          </option>
-                        <?php 
-                          }
-                        ?>
-                    </select>
-                </div>
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-success">Save changes</button>
-              </div>
-              </form>
-            </div>
-          
-        </div>
-      </div>
-
-
       <div class="table-responsive">
         <table class="table table-hover">
           <thead>
             
             <tr>
+              
               <th scope="col" class="fs-6">Section Name</th>
               <th scope="col" class="fs-6">Year Level</th>
+              <th scope="col" class="fs-6">Subject Name</th>
               <th scope="col" class="fs-6">Action</th>
             </tr> 
           </thead>
           <tbody>
-            <?php if($isSection):?>
-                <?php for($x = 0; $x < sizeof($sectionList); $x++){
-                    $sectionName = $sectionList[$x][2];
-                    $yearLvl = $sectionList[$x][1];
-                    $gradeSectionID = $sectionList[$x][0];
-                ?>
-                <tr>
-                    <td class="fs-6"><?php echo $sectionName; ?></td>
-                    <td class="fs-6"><?php echo $yearLvl + 6; ?></td>
-                    <td>
-                        <a href="/gradeSection/<?php echo $sectionName . "/" . $yearLvl . "/" . $gradeSectionID;?>" class="btn btn-success">
-                            View
-                        </a>
-                    </td>
-                </tr>
-                <?php 
-                    }
-                ?>
-            <?php endif;?>
+ 
+              <?php foreach($teacherSections->getResult() as $sectionList){
+                  $sectionName = $sectionList->SECTION;
+                  $subject = $sectionList->SUBJECT;
+                  $yearLvl = $sectionList->YEAR + 6;
+                  $gradeSectionID = $sectionList->ID;
+              ?>
+              <tr>
+                  <td class="fs-6"><?php echo $sectionName; ?></td>
+                  <td class="fs-6"><?php echo $yearLvl; ?></td>
+                  <td class="fs-6"><?php echo $subject;?></td>
+                  <td>
+                      <a href="/gradeSection/<?php echo $sectionName . "/" . $yearLvl . "/" . $gradeSectionID;?>" class="btn btn-success">
+                          View
+                      </a>
+                  </td>
+              </tr>
+              <?php 
+                  }
+              ?>
+ 
           </tbody>
         </table>
       </div>
