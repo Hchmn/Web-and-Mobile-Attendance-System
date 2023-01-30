@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body class="h-100 overflow-hidden bg-secondary">
+<body class="h-100 overflow-hidden bg-secondary" >
   <div class="row h-100">
     <div class="col">
     </div>

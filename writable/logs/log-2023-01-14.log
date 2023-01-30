@@ -1,0 +1,106 @@
+CRITICAL - 2023-01-14 09:41:07 --> Call to undefined method App\Controllers\Api::respond()
+in APPPATH\Controllers\Api.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getUsers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 09:41:57 --> Call to undefined method App\Controllers\Api::setResponseFormat()
+in APPPATH\Controllers\Api.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getUsers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 09:41:58 --> Call to undefined method App\Controllers\Api::setResponseFormat()
+in APPPATH\Controllers\Api.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getUsers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 09:42:40 --> Call to undefined method App\Controllers\Api::setResponseFormat()
+in APPPATH\Controllers\Api.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getUsers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 09:48:51 --> Undefined variable $queryBuilder
+in APPPATH\Controllers\Api.php on line 17.
+ 1 APPPATH\Controllers\Api.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $queryBuilder', 'APPPATH\\Controllers\\Api.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->login()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 10:06:35 --> password_hash(): Passing null to parameter #1 ($password) of type string is deprecated
+in APPPATH\Controllers\Api.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'password_hash(): Passing null to parameter #1 ($password) of type string is deprecated', 'APPPATH\\Controllers\\Api.php', 28)
+ 2 APPPATH\Controllers\Api.php(28): password_hash(null, '2y')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->loginUser()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 10:07:12 --> password_verify(): Passing null to parameter #1 ($password) of type string is deprecated
+in APPPATH\Controllers\Api.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'password_verify(): Passing null to parameter #1 ($password) of type string is deprecated', 'APPPATH\\Controllers\\Api.php', 35)
+ 2 APPPATH\Controllers\Api.php(35): password_verify(null, '$2y$10$KVX3wAw6RhmpxqL5LacwredDXXGd.Oj7MhgIGxIFRKogQk4GYboTa')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->loginUser()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 10:10:07 --> Undefined variable $id
+in APPPATH\Controllers\Api.php on line 60.
+ 1 APPPATH\Controllers\Api.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Api.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getTeacherSections()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 10:10:10 --> Undefined variable $id
+in APPPATH\Controllers\Api.php on line 60.
+ 1 APPPATH\Controllers\Api.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Api.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getTeacherSections()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 10:11:06 --> Undefined variable $id
+in APPPATH\Controllers\Api.php on line 62.
+ 1 APPPATH\Controllers\Api.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Api.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getTeacherSections()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-01-14 10:18:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 3
+CRITICAL - 2023-01-14 10:18:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM teacher_sections ts 
+            INNER JOIN gradesection g on g.ID = ts.GRADE_SECTION_ID 
+            where ts.TEACHER_ID = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM teacher_sections ts 
+            INNER JOIN gradesection g on g.ID = ts.GRADE_SECTION_ID 
+            where ts.TEACHER_ID = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM teacher_sections ts 
+            INNER JOIN gradesection g on g.ID = ts.GRADE_SECTION_ID 
+            where ts.TEACHER_ID = ')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('SELECT * FROM teacher_sections ts 
+            INNER JOIN gradesection g on g.ID = ts.GRADE_SECTION_ID 
+            where ts.TEACHER_ID = ')
+ 5 APPPATH\Controllers\Api.php(62): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getTeacherSections()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-14 10:57:21 --> Call to undefined method App\Controllers\Api::base_url()
+in APPPATH\Controllers\Api.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->getUsers()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

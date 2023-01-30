@@ -34,7 +34,14 @@ class Admin extends BaseController
   }
 
   public function student(){
-    return view ('admin/student');
+    
+    $gradeSection = $this->gradesectionModel->select("*")->get();
+
+    $data = [
+      "gradeSection" => $gradeSection->getResult()
+    ];
+
+    return view ('admin/student', $data);
   }
 
   public function add_student(){
@@ -106,7 +113,8 @@ class Admin extends BaseController
       $userType = $this->request->getVar('usertype');
       $created_at = date("Y-m-d H:i:s");
       $hashPassword = password_hash($password, PASSWORD_DEFAULT);
-
+      $subject = $this->request->getVar("subject");
+      
       $classId = ($userType == "2") ? $this->request->getVar('classId') : NULL;
       if($userType == "2"){
         $classId = $this->request->getVar('classId');
@@ -118,7 +126,7 @@ class Admin extends BaseController
           'AGE' => $age,
           'USERTYPE' => $userType,
           'DATE' => $created_at,
-          'CLASS_ID' => $classId,
+          'CLASS_ID' => NULL,
         ];
         
         $queryBuilder = $this->accountModel->WHERE("CLASS_ID", $classId)->first();
@@ -134,14 +142,18 @@ class Admin extends BaseController
           
           
           $user_id = $this->accountModel->getInsertId();
+          $insertId = $this->teacherSectionsModel->getInsertId();
           
           $data = [
             "TEACHER_ID" => $user_id,
             "GRADE_SECTION_ID" => $classId,
-            "ROLE" => 0,
-            "SUBJECT" => NULL,
+            "ROLE" => 1,
+            "SUBJECT" => $subject,
           ];
-          $this->teacherSectionsModel->save($data);
+
+          $saveTeacher = $this->teacherSectionsModel->save($data);
+          
+          
         }
         
       }
@@ -233,7 +245,7 @@ class Admin extends BaseController
   }
 
   public function admin_teachers(){
-    $queryBuilder = $this->accountModel->query("SELECT * FROM account a 
+    $queryBuilder = $this->accountModel->query("SELECT a.ID as ID, a.FNAME, a.LNAME, a.AGE, g.YEAR, g.SECTION FROM account a 
                       INNER JOIN gradesection g on g.ID = a.CLASS_ID 
                       where a.USERTYPE = 2");
 

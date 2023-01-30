@@ -1,0 +1,383 @@
+CRITICAL - 2023-01-21 13:44:00 --> Class "App\Controllers\date" not found
+in APPPATH\Controllers\Api.php on line 190.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:44:12 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:44:12')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:44:43 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:44:43')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:44:44 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:44:44')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:45:44 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 191.
+ 1 APPPATH\Controllers\Api.php(191): date('H:i:s', '2023-01-21 13:45:44')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:20 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:20')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:22 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:22')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:22 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:22')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:23 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:23')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:23 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:23')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:23 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:23')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:23 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:23')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:23 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:23')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:24 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:24')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:24 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:24')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:24 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:24')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:24 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:24')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:25 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:25')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:25 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:25')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:25 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:25')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:25 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '2023-01-21 13:46:25')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:42 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '13:46:42')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:46:43 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Controllers\Api.php on line 190.
+ 1 APPPATH\Controllers\Api.php(190): date('H:i:s', '13:46:43')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:51:08 --> Undefined variable $newdate
+in APPPATH\Controllers\Api.php on line 195.
+ 1 APPPATH\Controllers\Api.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $newdate', 'APPPATH\\Controllers\\Api.php', 195)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:51:43 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:10 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:10 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:11 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:11 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:11 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:11 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:11 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:12 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:12 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:12 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:12 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:12 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:31 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:32 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:32 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:33 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:33 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:33 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:33 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:33 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:52:33 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 192.
+ 1 APPPATH\Controllers\Api.php(192): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 192)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 13:53:22 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 191.
+ 1 APPPATH\Controllers\Api.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->test_()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-21 14:19:57 --> A non-numeric value encountered
+in APPPATH\Controllers\Api.php on line 224.
+ 1 APPPATH\Controllers\Api.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Api.php', 224)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Api->updateStudentAttendance()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

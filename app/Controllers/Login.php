@@ -15,6 +15,7 @@ class Login extends BaseController
   }
 
   public function verifyData()
+  
   {
 
     helper(['form']);

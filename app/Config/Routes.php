@@ -95,6 +95,21 @@ $routes->get('admin_year/(:any)', 'Admin::admin_year/$1');
 $routes->get('admin_section/(:any)', 'Admin::admin_section/$1');
 $routes->get("admin_section_student_attendance/(:any)", 'Admin::admin_section_student_attendance/$1');
 
+
+
+//API routes
+$routes->get('api_test', 'Api::getUsers');
+$routes->get('api_event', 'Api::login');
+$routes->post('api_login', 'Api::loginUser');
+$routes->get('api_teacher_sections', 'Api::getTeacherSections');
+$routes->get('api_student_section/(:any)', 'Api::getStudentSection/$1');
+$routes->get('api_teacher_sections/(:any)', 'Api::teacherSections/$1');
+$routes->post('api_start_attendance/(:any)', 'Api::startSectionAttendance/$1');
+$routes->post('api_update_attendance', 'Api::updateStudentAttendance');
+$routes->get('api_attendances/(:any)', 'Api::attendances/$1');
+$routes->get('api_date_section_attendance/(:any)', 'Api::section_attendance/$1');
+$routes->get('api_testing', 'Api::test_');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

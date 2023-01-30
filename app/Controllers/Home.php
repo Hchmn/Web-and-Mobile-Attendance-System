@@ -187,7 +187,7 @@ class Home extends BaseController
                 if($queryBuilder){
                     $grade = $queryBuilder['YEAR'];
                     $section = $queryBuilder['SECTION'];
-                    $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->get();
+                    $getStudents = $this->studentModel->select("*")->WHERE("GRADE", $grade)->WHERE("SECTION", $section)->WHERE("STATUS",1)->get();
                     $notification = $this->studentModel->select("*")->where("GRADE", $grade)->WHERE("SECTION", $section)->WHERE("STATUS", 1)->countAllResults();
                     $data = [
                         "studentData" => $getStudents,
@@ -246,7 +246,7 @@ class Home extends BaseController
                 from student_attendance sa
                     inner join student s on s.ID = sa.STUDENT_ID 
                     inner join teacher_sections ts on ts.ID = sa.TEACHER_SECTION_ID
-                    where sa.teacher_section_id = '$teacherID'
+                    where sa.teacher_section_id = '$gradeSectionID'
                     group by sa.`DATE`");
 
         $data = [
@@ -304,8 +304,8 @@ class Home extends BaseController
     //     $section = $section;
     //     $teacherID = session()->get("id");
 
-    //     date_default_timezone_set('Asia/Manila');
-    //     $date_today = date("Y-m-d");
+        // date_default_timezone_set('Asia/Manila');
+        // $date_today = date("Y-m-d");
     //     $queryBuilder = $this->studentAttendance->select("*")->WHERE("GRADE_SECTION_ID", $GRADE_SECTION_ID)->WHERE("DATE", $date_today)->WHERE("TEACHER_ID", $teacherID)->get();
     //     if(count($queryBuilder->getResult()) > 0){
     //         $validateAttendanceToday = false;
@@ -365,6 +365,7 @@ class Home extends BaseController
             if($queryBuilder){
                 date_default_timezone_set('Asia/Manila');
                 $date_today = date("Y-m-d");
+                
                 $queryAttendance = $this->studentAttendance->select("*")->WHERE("DATE",$date_today)->WHERE("TEACHER_ID", $teacherID)->WHERE("GRADE_SECTION_ID", $class_id)->get();
                 if(count($queryAttendance->getResult()) == 0){
                     $grade = $queryBuilder['YEAR'];

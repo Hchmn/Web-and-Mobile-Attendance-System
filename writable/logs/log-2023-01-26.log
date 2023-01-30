@@ -1,0 +1,112 @@
+CRITICAL - 2023-01-26 07:57:08 --> Undefined property: App\Controllers\Admin::$gradeSectionModel
+in APPPATH\Controllers\Admin.php on line 38.
+ 1 APPPATH\Controllers\Admin.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$gradeSectionModel', 'APPPATH\\Controllers\\Admin.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->student()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 07:57:29 --> Undefined variable $gradeSsection
+in APPPATH\Controllers\Admin.php on line 41.
+ 1 APPPATH\Controllers\Admin.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gradeSsection', 'APPPATH\\Controllers\\Admin.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->student()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 08:01:02 --> Undefined variable $studentSection
+in APPPATH\Views\admin\student.php on line 107.
+ 1 APPPATH\Views\admin\student.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentSection', 'APPPATH\\Views\\admin\\student.php', 107)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\student.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/student', [], true)
+ 5 APPPATH\Controllers\Admin.php(44): view('admin/student', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->student()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:18:51 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:27:31 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:27:37 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('3')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:30:05 --> Array to string conversion
+in APPPATH\Views\admin\studentrecords.php on line 114.
+ 1 APPPATH\Views\admin\studentrecords.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\admin\\studentrecords.php', 114)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\studentrecords.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/studentrecords', [], true)
+ 5 APPPATH\Controllers\Admin.php(244): view('admin/studentrecords', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->print_records()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:36:03 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:36:11 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:36:25 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:39:49 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2', 'U2FsdGVkX18KPA72DtasGnzkv3Ck4vuwVhw4yWn', 'l60dF Ji7Vji0uvYuUKyF1Hg5B7nIKFJxgX9msSLjDWNbQ==')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:41:35 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 110
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(110): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2', 'U2FsdGVkX1', 'ABnIwi0MMH3u27jJoF4l1o1q7OmNVxhXMbWHQVLXKi4C1663q7x3X55', 'KZbKFLTvcL25VKRmVzg==')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 09:43:02 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #1 ($uri) must be of type string, null given, called in C:\Users\Nash\Desktop\PROJECTS\MYPROJECTS\THESIS\WEB\Web-and-Mobile-Attendance-System\app\Controllers\PdfController.php on line 111
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\PdfController.php(111): CodeIgniter\HTTP\RedirectResponse->to(null)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\PdfController->studenHTMLTOPDF('2', 'U2FsdGVkX18lFyNgvMVXtVpY1NKdACeBQUIUU5WblDpAqfWBDuoSpsd53YcTMYmRqQkV5ZvVqDhWvPQ45ZCGFQ==')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PdfController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

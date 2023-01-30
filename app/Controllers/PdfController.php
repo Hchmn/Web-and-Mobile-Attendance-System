@@ -62,7 +62,7 @@ class PdfController extends BaseController{
         $dompdf->stream(); 
     }
 
-    public function studenHTMLTOPDF($id = 0){
+    public function studenHTMLTOPDF($id = 0, $qrCode = ""){
        
         $getID = $id;
         $queryBuilder = $this->studentModel->where("ID", $getID)->first();
@@ -74,13 +74,13 @@ class PdfController extends BaseController{
         $gender = $queryBuilder['GENDER'];
         $LRN = $queryBuilder['LRN'];
         $qr = $fName . " " . $lName . " " . $mName . " " .$LRN . " " . $gender . " " . $grade . " " . $section;;
-        $decryptedQRCode = password_verify($qr, $queryBuilder['QR']);
-        if ($decryptedQRCode) {
-            $qrCode = $qr;
-        } else {
-            $qrCode = null; 
-        }
-        $qrCode = ($decryptedQRCode) ? $qr : null;
+        // $decryptedQRCode = password_verify($qr, $queryBuilder['QR']);
+        // if ($decryptedQRCode) {
+        //     $qrCode = $qr;
+        // } else {
+        //     $qrCode = null; 
+        // }
+        // $qrCode = ($decryptedQRCode) ? $qr : null;
         $options = new QROptions(
             [
               'eccLevel' => QRCode::ECC_L,

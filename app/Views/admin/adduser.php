@@ -128,6 +128,14 @@
                   }
                 ?>
               </select>
+              
+              <label for="exampleInputEmail1" class="form-label fs-6">Subject</label>
+              <select class="form-select w-50" name="subject"  onchange="" required>
+                  <option value="English">English</option>
+                  <option value="Math">Math</option>  
+                  <option value="Filipino">Filipino</option>
+                  <option value="Science">Science</option>
+              </select>
             </div>
 
             <button type="submit" class="btn btn-success mt-3 float-center">Submit</button>

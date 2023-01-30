@@ -101,6 +101,47 @@
     </div>
   </div>
 
+<script>
+
+function updateOption() {
+  gradeSections = <?php echo json_encode($gradeSection)?>;  
+  var year = document.getElementById("year").value;
+  var sectionNodeList = document.getElementsByClassName("section");
+
+  for (var i = 0; i < sectionNodeList.length; i++) {
+    while (sectionNodeList[i].options.length) {
+      sectionNodeList[i].remove(0);
+    }
+  }
+  
+  let counter = 0;
+  gradeSections.map((item,index) => {
+    if(item.YEAR == year){
+      var section = new Option(item.SECTION);
+      sectionNodeList[0].options.add(section);
+    }
+    
+  })
+}
+
+function generateQRCode() {
+  let username = document.getElementById("firstname").value;
+  let password = document.getElementById("lastname").value;
+
+  let qrcode = username + password;
+
+  if (username && password) {
+    let qrcodeContainer = document.getElementById("qrcode");
+    qrcodeContainer.innerHTML = "";
+    new QRCode(qrcodeContainer, qrcode);
+    document.getElementById("qrcode-container").style.display = "block";
+    document.getElementById("qrcode-container").style.marginBottom = "40px";
+  } else {
+    alert("YOU MUST FILL ALL THE REQUIREMENTS BEFORE GENERATING THE QRCODE");
+  }
+}
+</script>
+
 </body>
 
 </html>
